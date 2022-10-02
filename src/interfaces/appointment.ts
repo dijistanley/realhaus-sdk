@@ -1,8 +1,6 @@
+import { AppointmentType } from '../enums/appointment';
 import { IEntity } from './entity';
 
-export enum AppointmentType {
-  SHOWING
-}
 export interface Appointment {
   type: AppointmentType;
   timeslotId: string;

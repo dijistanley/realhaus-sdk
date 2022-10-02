@@ -1,5 +1,4 @@
 import { LatLngLiteral } from './googlemaps';
-
 export interface GeohashLiteral {
   geohash: string;
 }
