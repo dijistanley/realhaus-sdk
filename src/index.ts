@@ -4,6 +4,7 @@
 export * from './constants/amenities';
 export * from './constants/calendar';
 export * from './constants/creditScore';
+export * from './constants/lease';
 export * from './constants/provinces';
 
 /**
@@ -11,6 +12,7 @@ export * from './constants/provinces';
  */
 export * from './enums/appointment';
 export * from './enums/creditScore';
+export * from './enums/lease';
 export * from './enums/rentApplication';
 
 /**
@@ -22,6 +24,7 @@ export * from './interfaces/appointment';
 export * from './interfaces/creditReport';
 export * from './interfaces/entity';
 export * from './interfaces/googlemaps';
+export * from './interfaces/lease';
 export * from './interfaces/message';
 export * from './interfaces/property';
 export * from './interfaces/rentApplication';
