@@ -13,7 +13,7 @@ export enum IncomeType {
   WEEKLY = 'weekly',
   BIWEEKLY = 'bi-weekly',
   MONTHLY = 'monthly',
-  YEARLY = 'yearly'
+  YEARLY = 'yearly',
 }
 
 export interface IOccupation {
