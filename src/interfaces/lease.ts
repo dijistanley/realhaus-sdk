@@ -18,6 +18,7 @@ export interface ILeasePolicy {
 }
 
 export interface ILeaseFees {
+  nsfFee: number;
   lateRentFee: number;
   parkingFee?: number;
   moveInFee: number;
