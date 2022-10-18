@@ -5,31 +5,31 @@ export const creditScoreRanges: CreditScoreRange[] = [
   {
     level: CreditScoreLevel.EXCELLENT,
     upper: 900,
-    lower: 833,
-    color: 'rgb(67, 224, 193)'
+    lower: 800,
+    color: 'rgb(30, 122, 30)'
   },
   {
     level: CreditScoreLevel.VERYGOOD,
-    upper: 832,
-    lower: 790,
-    color: 'rgb(72, 176, 229)'
+    upper: 799,
+    lower: 740,
+    color: 'rgb(76, 175, 80)'
   },
   {
     level: CreditScoreLevel.GOOD,
-    upper: 789,
-    lower: 743,
-    color: 'rgb(248, 211, 69)'
+    upper: 739,
+    lower: 670,
+    color: 'rgb(255, 235, 59)'
   },
   {
     level: CreditScoreLevel.FAIR,
-    upper: 742,
-    lower: 693,
-    color: 'rgb(255, 136, 56)'
+    upper: 669,
+    lower: 580,
+    color: 'rgb(255, 128, 0)'
   },
   {
     level: CreditScoreLevel.POOR,
-    upper: 692,
+    upper: 579,
     lower: 300,
-    color: 'rgb(255, 98, 101)'
+    color: 'rgb(255, 67, 54)'
   },
 ]

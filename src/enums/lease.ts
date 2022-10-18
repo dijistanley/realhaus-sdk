@@ -20,3 +20,12 @@ export enum LeaseAgreementViewer {
   TENANT = 'Tenant',
   LANDLORD = 'LANDLORD'
 }
+
+export enum ConditionOPS {
+  NOTEQUAL = '!=',
+  GTEQUAL = '>=',
+  LTEQUAL = '<=',
+  EQUAL = '=',
+  GT = '>',
+  LT = '<',
+}
