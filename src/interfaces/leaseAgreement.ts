@@ -1,0 +1,39 @@
+import { ConditionOPS } from '../enums/lease';
+
+export interface ILeaseAgreementTemplate {
+  sections: ILeaseAgreementTemplateSection[];
+}
+export interface ILeaseAgreementTemplateSection {
+  title: string;
+  entries?: ILeaseAgreementTemplateEntry[];
+}
+
+export interface ILeaseAgreementTemplateEntry {
+  condition?: IEntryCondition,
+  value: string;
+  entries?: ILeaseAgreementTemplateEntry[];
+}
+
+export interface IEntryCondition {
+  left: string;
+  op: ConditionOPS;
+  right: string;
+}
+
+export interface ILeaseAgreementTemplateData {
+  LENGTH_OF_LEASE_MONTHS: number,
+  START_DATE_OF_LEASE: string,
+  END_DATE_OF_LEASE: string,
+  PETS: boolean,
+  PARKING: boolean,
+  SMOKING: boolean,
+  RENT_AMOUNT: number,
+  RENT_DUE_DAY: string, // FIRST or 1st
+  NSF_FEE_AMOUNT: number,
+  LATE_RENT_FEE_AMOUNT: number,
+  LATE_RENT_GRACE_PERIOD_DAYS: number,
+  SECURITY_DEPOSIT_AMOUNT: number,
+  SECURITY_DEPOSIT_RETURN_IN_DAYS: number,
+  LEASE_RENEW_DAYS: number,
+  MEDIATION_TIMELINE_BEFORE_ESCALATION_DAYS: number,
+}

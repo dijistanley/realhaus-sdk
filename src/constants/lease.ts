@@ -14,3 +14,12 @@ export const FeePaymentFrequencies = [
     label: 'Monthly Fee (due with rent)',
   },
 ];
+
+export const ConditionComparer = {
+  "!=": (a: string, b: string) => a.toLowerCase() !== b.toLowerCase(),
+  "<=": (a: string, b: string) => a.toLowerCase() <= b.toLowerCase(),
+  ">=": (a: string, b: string) => a.toLowerCase() >= b.toLowerCase(),
+  "=": (a: string, b: string) => a.toLowerCase() === b.toLowerCase(),
+  ">": (a: string, b: string) => a.toLowerCase() > b.toLowerCase(),
+  "<": (a: string, b: string) => a.toLowerCase() < b.toLowerCase(),
+};
