@@ -31,3 +31,4 @@ export * from './interfaces/property';
 export * from './interfaces/rentApplication';
 export * from './interfaces/user';
 export * from './interfaces/userGroups';
+export * from './interfaces/rating';

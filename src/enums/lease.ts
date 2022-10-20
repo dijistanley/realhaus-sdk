@@ -29,3 +29,14 @@ export enum ConditionOPS {
   GT = '>',
   LT = '<',
 }
+
+export enum OccupantRelationship {
+  SPOUSE = 'Spouse',
+  COMMON_LAW = 'Common Law',
+  CHILD = 'Child',
+  PARENT = 'Parent',
+  SIBLING = 'Sibling',
+  GRAND_PARENT = 'Grand Parent',
+  GRAND_CHILD = 'Grand Child',
+  OTHER = 'Other'
+}
