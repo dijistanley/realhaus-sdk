@@ -56,7 +56,7 @@ export interface ILeaseAgreement {
   signatures: ILeaseSignature[];
   signatureRequestDate?: number;
   status: LeaseAgreementStatus;
-  occupants: IOccupants[];
+  occupants: IOccupant[];
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
@@ -68,7 +68,7 @@ export interface ILeaseInvite {
 }
 export type IdLeaseInvite = IEntity & ILeaseInvite;
 
-export interface IOccupants {
+export interface IOccupant {
   firstName: string;
   middleName: string;
   lastName: string;
