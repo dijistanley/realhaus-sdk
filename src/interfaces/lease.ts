@@ -1,4 +1,4 @@
-import { FeePaymentFrequency, LeaseEndAction, LeaseAgreementStatus } from '../enums/lease';
+import { FeePaymentFrequency, LeaseEndAction, LeaseAgreementStatus, OccupantRelationship } from '../enums/lease';
 import { IDescription } from './description';
 import { IEntity } from './entity';
 import { IListing, IProperty } from './property';
@@ -70,6 +70,7 @@ export type IdLeaseInvite = IEntity & ILeaseInvite;
 
 export interface IOccupants {
   firstName: string;
+  middleName: string;
   lastName: string;
-  relationship: string;
+  relationship: OccupantRelationship;
 }
