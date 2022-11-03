@@ -7,6 +7,14 @@ export interface IProfile {
   dateOfBirth: number;
   phone: string;
   address: IResidenceInfo;
+  isVerified: boolean;
+  verifyContext: IVerifyContext;
+}
+
+export interface IVerifyContext {
+  vendor: string;
+  vendorContextId: string;
+  dateVerified: string;
 }
 
 export enum IncomeType {
