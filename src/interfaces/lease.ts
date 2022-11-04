@@ -82,5 +82,5 @@ export interface ILeaseChangeRequest {
   requestedBy: string;
   userAgent: string;
   timestamp: number;
-  acknowledgedAt?: number;
+  resolvedAt?: number;
 }
