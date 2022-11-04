@@ -38,6 +38,7 @@ export interface ILeaseSignature {
   userAgent: string;
   timestamp: number;
 }
+
 export interface ILeaseAgreement {
   tenantIds: string[];
   ownerId: string;
@@ -57,6 +58,7 @@ export interface ILeaseAgreement {
   signatureRequestDate?: number;
   status: LeaseAgreementStatus;
   occupants: IOccupant[];
+  changeRequests: ILeaseChangeRequest[];
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
@@ -73,4 +75,12 @@ export interface IOccupant {
   middleName: string;
   lastName: string;
   relationship: OccupantRelationship;
+}
+
+export interface ILeaseChangeRequest {
+  message: string;
+  requestedBy: string;
+  userAgent: string;
+  timestamp: number;
+  acknowledgedAt?: number;
 }
