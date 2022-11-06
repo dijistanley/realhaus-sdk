@@ -4,7 +4,7 @@ import { Vendors } from '../enums/bankAccount'
 export interface IFlinksContext {
   loginId: string,
   institution: string
-  accountId: string
+  accountId?: string
 }
 
 export interface IBankConnection {
