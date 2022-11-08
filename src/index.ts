@@ -14,6 +14,7 @@ export * from './enums/appointment';
 export * from './enums/creditScore';
 export * from './enums/lease';
 export * from './enums/rentApplication';
+export * from './enums/bankAccount';
 
 /**
  * Export interfaces
@@ -32,3 +33,4 @@ export * from './interfaces/rentApplication';
 export * from './interfaces/user';
 export * from './interfaces/userGroups';
 export * from './interfaces/rating';
+export * from './interfaces/bankAccount';
