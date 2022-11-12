@@ -14,7 +14,7 @@ export interface IProfile {
 export interface IVerifyContext {
   vendor: string;
   vendorContextId: string;
-  dateVerified: string;
+  dateVerified: number;
 }
 
 export enum IncomeType {
