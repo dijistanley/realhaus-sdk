@@ -17,7 +17,7 @@ export interface IVerifyContext {
   dateVerified: number;
 }
 
-interface IproviderData {
+export interface IproviderData {
   displayName: string;
   email: string;
   phoneNumber: string;
