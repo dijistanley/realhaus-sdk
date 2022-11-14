@@ -17,13 +17,6 @@ export interface IVerifyContext {
   dateVerified: number;
 }
 
-export interface IproviderData {
-  displayName: string;
-  email: string;
-  phoneNumber: string;
-  photoURL: string;
-}
-
 export enum IncomeType {
   WEEKLY = 'weekly',
   BIWEEKLY = 'bi-weekly',
@@ -46,7 +39,8 @@ export interface IUserInfo {
   uid: string;
   username: string;
   email: string;
-  providerData: IproviderData[];
+  phoneNumber: string;
+  photoURL: string;
 }
 
 export enum IdentityType {
