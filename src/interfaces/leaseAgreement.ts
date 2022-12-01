@@ -2,6 +2,7 @@ import { ConditionOPS } from '../enums/lease';
 
 export interface ILeaseAgreementTemplate {
   sections: ILeaseAgreementTemplateSection[];
+  header: ILeaseAgreementTemplateHeader;
 }
 
 export interface ILeaseAgreementTemplateSection {
