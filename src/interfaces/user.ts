@@ -6,6 +6,7 @@ export interface IProfile {
   gender: string;
   dateOfBirth: number;
   phone: string;
+  userEmergencyContact: IEmergencyContact;
   address: IResidenceInfo;
   isVerified: boolean;
   verifyContext: IVerifyContext;
