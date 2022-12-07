@@ -16,7 +16,6 @@ export * from './enums/identityVerification';
 export * from './enums/lease';
 export * from './enums/rentApplication';
 export * from './enums/bankAccount';
-export * from './enums/inputField';
 
 /**
  * Export interfaces
