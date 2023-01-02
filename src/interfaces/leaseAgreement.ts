@@ -44,5 +44,4 @@ export interface ILeaseAgreementTemplateData {
   SECURITY_DEPOSIT_RETURN_IN_DAYS: number;
   LEASE_RENEW_DAYS: number;
   MEDIATION_TIMELINE_BEFORE_ESCALATION_DAYS: number;
-  PARKING_FEE_AMOUNT: number;
 }
