@@ -1,10 +1,13 @@
 import { IAddress } from './address';
 
+export interface IUserBio {
+    firstname: string;
+    lastname: string;
+    gender?: string;
+    dateOfBirth?: number;
+}
+
 export interface IProfile {
-  firstname: string;
-  lastname: string;
-  gender: string;
-  dateOfBirth: number;
   phone: string;
   userEmergencyContact: IEmergencyContact;
   address: IResidenceInfo;
