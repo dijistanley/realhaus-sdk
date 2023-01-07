@@ -64,7 +64,7 @@ export interface IResidenceInfo {
   moveinDate: number;
   moveoutDate?: number;
 }
-export interface ITenantProfile extends IProfile {
+export interface ITenantProfile extends IProfile, IUserBio {
   occupation: IOccupation;
   identity: IIdentity;
   previousNonRentalAddresses: IResidenceInfo[];
