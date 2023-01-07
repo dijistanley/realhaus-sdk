@@ -7,7 +7,7 @@ export interface IUserBio {
     dateOfBirth?: number;
 }
 
-export interface IProfile {
+export interface IProfile extends IUserBio {
   phone: string;
   userEmergencyContact: IEmergencyContact;
   address: IResidenceInfo;
@@ -64,7 +64,7 @@ export interface IResidenceInfo {
   moveinDate: number;
   moveoutDate?: number;
 }
-export interface ITenantProfile extends IProfile, IUserBio {
+export interface ITenantProfile extends IProfile {
   occupation: IOccupation;
   identity: IIdentity;
   previousNonRentalAddresses: IResidenceInfo[];
