@@ -9,8 +9,6 @@ export interface IUserBio {
 
 export interface IProfile extends IUserBio {
   phone: string;
-  userEmergencyContact: IEmergencyContact;
-  address: IResidenceInfo;
   isVerified: boolean;
   verifyContext: IVerifyContext;
 }
@@ -64,9 +62,10 @@ export interface IResidenceInfo {
   moveinDate: number;
   moveoutDate?: number;
 }
-export interface ITenantProfile extends IProfile {
+export interface ITenantProfile {
   occupation: IOccupation;
   identity: IIdentity;
+  address: IResidenceInfo;
   previousNonRentalAddresses: IResidenceInfo[];
   emergencyContact: IEmergencyContact;
 }
