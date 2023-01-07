@@ -5,10 +5,10 @@ export interface IUserBio {
   lastname: string;
   gender: string;
   dateOfBirth: number;
+  phone: string;
 }
 
 export interface IProfile extends IUserBio {
-  phone: string;
   isVerified: boolean;
   verifyContext: IVerifyContext;
 }
