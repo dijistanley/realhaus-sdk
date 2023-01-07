@@ -1,10 +1,10 @@
 import { IAddress } from './address';
 
 export interface IUserBio {
-    firstname: string;
-    lastname: string;
-    gender: string;
-    dateOfBirth: number;
+  firstname: string;
+  lastname: string;
+  gender: string;
+  dateOfBirth: number;
 }
 
 export interface IProfile extends IUserBio {
