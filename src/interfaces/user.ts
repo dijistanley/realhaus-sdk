@@ -5,8 +5,8 @@ export interface IUserBio {
   lastname: string;
   gender: string;
   dateOfBirth: number;
-  phone: string;
-  profileImage: string;
+  phoneNumber: string;
+  photoURL: string;
 }
 
 export interface IProfile extends IUserBio {
