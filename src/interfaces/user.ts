@@ -75,3 +75,5 @@ export interface IEmergencyContact {
   email: string;
   phone: string;
 }
+
+export type ITenantInfo = ITenantProfile & IUserBio;
