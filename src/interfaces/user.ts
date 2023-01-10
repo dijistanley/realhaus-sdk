@@ -6,6 +6,7 @@ export interface IUserBio {
   gender: string;
   dateOfBirth: number;
   phone: string;
+  profileImage: string;
 }
 
 export interface IProfile extends IUserBio {
