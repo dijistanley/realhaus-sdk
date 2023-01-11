@@ -1,13 +1,15 @@
 import { IAddress } from './address';
 
-export interface IProfile {
+export interface IUserBio {
   firstname: string;
   lastname: string;
   gender: string;
   dateOfBirth: number;
-  phone: string;
-  userEmergencyContact: IEmergencyContact;
-  address: IResidenceInfo;
+  phoneNumber: string;
+  photoURL: string;
+}
+
+export interface IProfile extends IUserBio {
   isVerified: boolean;
   verifyContext: IVerifyContext;
 }
@@ -61,9 +63,10 @@ export interface IResidenceInfo {
   moveinDate: number;
   moveoutDate?: number;
 }
-export interface ITenantProfile extends IProfile {
+export interface ITenantProfile {
   occupation: IOccupation;
   identity: IIdentity;
+  address: IResidenceInfo;
   previousNonRentalAddresses: IResidenceInfo[];
   emergencyContact: IEmergencyContact;
 }
@@ -72,3 +75,5 @@ export interface IEmergencyContact {
   email: string;
   phone: string;
 }
+
+export type ITenantInfo = ITenantProfile & IUserBio;

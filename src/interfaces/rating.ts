@@ -32,6 +32,7 @@ export type IdRating = IEntity & IRating;
 
 export interface IReview {
   firstName?: string;
+  profileImage?: string;
   review: string;
   date: string;
 }
