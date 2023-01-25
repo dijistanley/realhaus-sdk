@@ -17,6 +17,7 @@ export * from './enums/lease';
 export * from './enums/rentApplication';
 export * from './enums/bankAccount';
 export * from './enums/inputField';
+export * from './enums/wallet';
 
 /**
  * Export interfaces
@@ -37,3 +38,4 @@ export * from './interfaces/rentApplication';
 export * from './interfaces/user';
 export * from './interfaces/userGroups';
 export * from './interfaces/rating';
+export * from './interfaces/wallet';
