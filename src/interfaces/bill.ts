@@ -19,7 +19,7 @@ export interface IBill {
   type: BillType;
   status: BillStatus;
   dateCreated: number;
-  dateUpdated: number;
+  dateUpdated?: number;
 }
 
 export type IdBill = IEntity & IBill;
