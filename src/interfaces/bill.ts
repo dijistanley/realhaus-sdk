@@ -3,7 +3,8 @@ import { IEntity } from './entity';
 export enum BillType {
   RENT = 'RENT',
   FEES = 'FEES',
-  SERVICE = 'SERVICE'
+  SERVICE = 'SERVICE',
+  SECURITY_DEPOSIT = 'SECURITY_DEPOSIT'
 }
 
 export enum BillStatus {
