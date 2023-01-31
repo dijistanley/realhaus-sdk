@@ -21,9 +21,9 @@ export enum BillStatus {
 }
 
 export interface IBill {
-  due: number;
   amount: number;
   type: BillType;
+  dueDate: number;
   status: BillStatus;
   dateCreated: number;
   dateUpdated?: number;
