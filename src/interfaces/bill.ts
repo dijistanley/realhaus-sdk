@@ -27,6 +27,9 @@ export interface IBill {
   status: BillStatus;
   dateCreated: number;
   dateUpdated?: number;
+  datePaid?: number;
+  leaseId?: string;
+  debtorId: string;
 }
 
 export type IdBill = IEntity & IBill;
