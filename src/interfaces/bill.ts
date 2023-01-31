@@ -28,7 +28,7 @@ export interface IBill {
   dateCreated: number;
   dateUpdated?: number;
   datePaid?: number;
-  leaseId?: string;
+  leaseId: string;
   debtorId: string;
 }
 
