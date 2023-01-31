@@ -77,3 +77,10 @@ export interface IEmergencyContact {
 }
 
 export type ITenantInfo = ITenantProfile & IUserBio;
+
+export interface ITenantLeaseInvite{
+  firstname: string;
+  lastname: string;
+  email: string;
+  leaseAgreementId: string
+}
