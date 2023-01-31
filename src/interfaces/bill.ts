@@ -30,6 +30,7 @@ export interface IBill {
   datePaid?: number;
   leaseId: string;
   debtorId: string;
+  creditorId: string;
 }
 
 export type IdBill = IEntity & IBill;
