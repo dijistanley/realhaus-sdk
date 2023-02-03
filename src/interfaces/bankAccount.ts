@@ -2,12 +2,13 @@ import { IEntity } from './entity'
 import { Vendors } from '../enums/bankAccount'
 
 export interface IFlinksContext {
-  loginId: string,
+  loginId: string
   institution: string
   accountId?: string
 }
 
 export interface IBankConnection {
+  timestamp: number
   vendor: Vendors
   context: IFlinksContext
 }
