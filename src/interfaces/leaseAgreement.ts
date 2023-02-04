@@ -48,3 +48,10 @@ export interface ILeaseAgreementTemplateData {
   RENT_DEPOSIT_RETURN_IN_DAYS: number;
   INSURANCE: boolean;
 }
+
+export interface ITenantLeaseInvite{
+  firstname: string;
+  lastname: string;
+  email: string;
+  leaseAgreementId: string
+}
