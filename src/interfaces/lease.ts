@@ -59,6 +59,7 @@ export interface ILeaseAgreement {
   status: LeaseAgreementStatus;
   occupants: IOccupant[];
   changeRequests: ILeaseChangeRequest[];
+  source: string
 }
 
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
