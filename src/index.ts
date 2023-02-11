@@ -40,3 +40,5 @@ export * from './interfaces/userGroups';
 export * from './interfaces/rating';
 export * from './interfaces/wallet';
 export * from './interfaces/bill';
+export * from './interfaces/prospectiveTenant';
+export * from './interfaces/mail';
