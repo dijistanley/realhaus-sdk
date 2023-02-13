@@ -4,7 +4,13 @@ export interface IProspectiveTenant {
   firstname: string;
   lastname: string;
   email: string;
-  listingId: string;
+  listingInfo: {
+    listingId: string;
+    landlordName: string;
+    rentAmount: number;
+    city: string;
+    province: string;
+  };
 }
 
-export type IdProspectiveTenent = IEntity & IProspectiveTenant;
+export type IdProspectiveTenant = IEntity & IProspectiveTenant;

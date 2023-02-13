@@ -9,3 +9,12 @@ export interface IMail {
 }
 
 export type IdMail = IEntity & IMail;
+
+export interface IListingMailInfo {
+  listingId: string;
+  landlordName: string;
+  rentAmount: number;
+  city: string;
+  province: string;
+}
+
