@@ -53,5 +53,14 @@ export interface ITenantLeaseInvite{
   firstname: string;
   lastname: string;
   email: string;
-  leaseAgreementId: string
+}
+
+export interface ILeaseAgreementDocument {
+    title: string;
+    file: File;
+}
+
+export interface ILeaseAgreementSavedDocument {
+    title: string;
+    url: string;
 }
