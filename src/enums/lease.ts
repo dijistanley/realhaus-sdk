@@ -40,3 +40,8 @@ export enum OccupantRelationship {
   GRAND_CHILD = 'Grand Child',
   OTHER = 'Other'
 }
+
+export enum LeaseAgreementSource {
+  REALHAUS = "realhaus",
+  NON_REALHAUS = "non-realhaus"
+}

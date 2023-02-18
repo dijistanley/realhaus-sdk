@@ -1,4 +1,4 @@
-import { FeePaymentFrequency, LeaseEndAction, LeaseAgreementStatus, OccupantRelationship } from '../enums/lease';
+import { FeePaymentFrequency, LeaseEndAction, LeaseAgreementStatus, OccupantRelationship, LeaseAgreementSource } from '../enums/lease';
 import { IDescription } from './description';
 import { IEntity } from './entity';
 import { IListing, IProperty } from './property';
@@ -59,6 +59,7 @@ export interface ILeaseAgreement {
   status: LeaseAgreementStatus;
   occupants: IOccupant[];
   changeRequests: ILeaseChangeRequest[];
+  source: LeaseAgreementSource
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
@@ -83,4 +84,20 @@ export interface ILeaseChangeRequest {
   userAgent: string;
   timestamp: number;
   resolvedAt?: number;
+}
+
+export interface ITenantLeaseInvite {
+  firstname: string;
+  lastname: string;
+  email: string;
+}
+
+export interface ILeaseAgreementDocument {
+  title: string;
+  file: File;
+}
+
+export interface ILeaseAgreementSavedDocument {
+  title: string;
+  url: string;
 }
