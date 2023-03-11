@@ -94,10 +94,6 @@ export interface ITenantLeaseInvite {
 
 export interface ILeaseAgreementDocument {
   title: string;
-  file: File;
-}
-
-export interface ILeaseAgreementSavedDocument {
-  title: string;
-  url: string;
+  file?: File;
+  url?: string
 }
