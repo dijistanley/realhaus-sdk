@@ -6,11 +6,16 @@ export interface IFlinksContext {
   institution: string
   accountId?: string
 }
+export interface IPaypalContext {
+  payer_id: string
+  email: string
 
+}
 export interface IBankConnection {
   timestamp: number
   vendor: Vendors
-  context: IFlinksContext
+  context?: IFlinksContext
+  paypalContext?: IPaypalContext
 }
 
 export interface IBankAccount {

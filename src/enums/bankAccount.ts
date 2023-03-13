@@ -1,5 +1,6 @@
 export enum Vendors {
   FLINKS = 'FLINKS',
+  PAYPAL = 'PAYPAL'
 }
 
 export enum BankAccountPurpose {
