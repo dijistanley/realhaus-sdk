@@ -12,11 +12,16 @@ export interface IPaypalContext {
   email: string;
 }
 
+export interface IPaypalConnection {
+  timestamp: number;
+  vendor: Vendors;
+  context: IPaypalContext;
+}
+
 export interface IBankConnection {
   timestamp: number;
   vendor: Vendors;
-  context?: IFlinksContext;
-  paypalContext?: IPaypalContext;
+  context: IFlinksContext;
 }
 
 export interface IBankAccount {
