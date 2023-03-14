@@ -15,7 +15,7 @@ export interface IPaypalContext {
 export interface IBankConnection {
   timestamp: number;
   vendor: Vendors;
-  context: IFlinksContext | IPaypalContext;
+  context: IFlinksContext & IPaypalContext;
 }
 
 export interface IBankAccount {
