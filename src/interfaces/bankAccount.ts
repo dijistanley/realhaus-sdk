@@ -2,14 +2,14 @@ import { IEntity } from './entity';
 import { Vendors } from '../enums/bankAccount';
 
 export interface IFlinksContext {
-  loginId: string;
-  institution: string;
+  loginId?: string;
+  institution?: string;
   accountId?: string;
 }
 
 export interface IPaypalContext {
-  payer_id: string;
-  email: string;
+  payer_id?: string;
+  email?: string;
 }
 
 export interface IBankConnection {
