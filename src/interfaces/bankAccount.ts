@@ -12,7 +12,7 @@ export interface IPaypalContext {
   email?: string;
 }
 
-export interface PaypalToken {
+export interface IPaypalToken {
   scope: string;
   access_token: string;
   token_type: string;
