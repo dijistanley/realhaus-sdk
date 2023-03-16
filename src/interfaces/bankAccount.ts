@@ -12,6 +12,15 @@ export interface IPaypalContext {
   email?: string;
 }
 
+export interface PaypalToken {
+  scope: string;
+  access_token: string;
+  token_type: string;
+  expires_in: string;
+  refresh_token: string;
+  nonce: string;
+}
+
 export interface IBankConnection {
   timestamp: number;
   vendor: Vendors;
