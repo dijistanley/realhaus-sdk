@@ -98,3 +98,5 @@ export interface ILeaseAgreementDocument {
   file?: File;
   url?: string
 }
+
+export type IdTenantInviteLease = IEntity & ITenantLeaseInvite
