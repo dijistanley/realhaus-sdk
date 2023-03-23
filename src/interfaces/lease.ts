@@ -90,6 +90,7 @@ export interface ITenantLeaseInvite {
   firstname: string;
   lastname: string;
   email: string;
+  invitationSent?: boolean
 }
 
 export interface ILeaseAgreementDocument {
