@@ -34,3 +34,11 @@ export interface IBill {
 }
 
 export type IdBill = IEntity & IBill;
+
+export interface IBillRequest {
+  leaseId: string,
+  billId: string,
+  senderId: string,
+  amount: number,
+  note: string
+};
