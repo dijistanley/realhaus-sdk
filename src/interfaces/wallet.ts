@@ -34,3 +34,12 @@ export interface ITransactionLog {
 }
 
 export type IDTransactionLog = IEntity & ITransactionLog;
+
+export interface IServiceCharge {
+  timestamp: number;
+  amount: number;
+  walletId: string;
+  notes: string;
+}
+
+export type IDServiceCharge = IEntity & IServiceCharge;
