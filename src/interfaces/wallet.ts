@@ -15,11 +15,10 @@ export interface ITransaction {
   balance: number;
   timestamp: number;
   notes: string;
-  trxLogId: string;
+  trxLogId?: string;
 }
 
 export type IDTransaction = IEntity & ITransaction;
-
 
 export interface ITransactionLog {
   timestamp: number;
