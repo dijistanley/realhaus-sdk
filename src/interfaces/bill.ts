@@ -16,7 +16,6 @@ export enum BillType {
 
 export enum BillStatus {
   PENDING = 'PENDING',
-  PROCESSING_PAYMENT = 'PROCESSING_PAYMENT',
   PAID = 'PAID'
 }
 
