@@ -15,7 +15,7 @@ export interface ITransaction {
   balance: number;
   timestamp: number;
   notes: string;
-  trxLogId?: string;
+  trxLogId: string;
 }
 
 export type IDTransaction = IEntity & ITransaction;
@@ -34,12 +34,3 @@ export interface ITransactionLog {
 }
 
 export type IDTransactionLog = IEntity & ITransactionLog;
-
-export interface IServiceCharge {
-  timestamp: number;
-  amount: number;
-  walletId: string;
-  notes: string;
-}
-
-export type IDServiceCharge = IEntity & IServiceCharge;
