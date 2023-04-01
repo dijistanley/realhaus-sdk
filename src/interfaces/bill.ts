@@ -19,7 +19,7 @@ export enum BillStatus {
   PAID = 'PAID',
 }
 
-export enum Fee {
+export enum Fees {
   FLAT_FEE = 35,
   PERCENT = 2.5,
 }
