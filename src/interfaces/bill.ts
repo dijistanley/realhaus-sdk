@@ -16,7 +16,12 @@ export enum BillType {
 
 export enum BillStatus {
   PENDING = 'PENDING',
-  PAID = 'PAID'
+  PAID = 'PAID',
+}
+
+export enum Fee {
+  FLAT_FEE = 35,
+  PERCENT = 2.5,
 }
 
 export interface IBill {
@@ -35,9 +40,9 @@ export interface IBill {
 export type IdBill = IEntity & IBill;
 
 export interface IBillRequest {
-  leaseId: string,
-  billId: string,
-  senderId: string,
-  amount: number,
-  note: string
-};
+  leaseId: string;
+  billId: string;
+  senderId: string;
+  amount: number;
+  note: string;
+}
