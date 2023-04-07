@@ -11,6 +11,7 @@ export enum TrxLogType {
 
 export enum TransactionStatus {
   PENDING = 'PENDING',
+  PROCESSING = 'PROCESSING',
   SUCCESS = 'SUCCESS',
   FAILED = 'FAILED',
   PENDING_REALHAUS = 'PENDING_REALHAUS',
