@@ -99,4 +99,11 @@ export interface ILeaseAgreementDocument {
   url?: string
 }
 
+export type IdLeaseAgreementDocument = IEntity & ILeaseAgreementDocument
+
 export type IdTenantInviteLease = IEntity & ITenantLeaseInvite
+
+export interface IDocumentType {
+  title?: string;
+  file?: File
+}
