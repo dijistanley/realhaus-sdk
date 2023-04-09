@@ -29,7 +29,7 @@ export interface ITransactionLog {
   receiverId: string;
   status: TransactionStatus;
   referenceId?: string;
-  naration: string;
+  narration: string;
   notes?: string;
   source: string;
 }
