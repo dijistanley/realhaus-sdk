@@ -32,6 +32,7 @@ export interface ITransactionLog {
   narration: string;
   notes?: string;
   source: string;
+  meta?: Map<string, string>;
 }
 
 export type IDTransactionLog = IEntity & ITransactionLog;
