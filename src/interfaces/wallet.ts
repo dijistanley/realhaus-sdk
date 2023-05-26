@@ -20,6 +20,9 @@ export interface ITransaction {
 
 export type IDTransaction = IEntity & ITransaction;
 
+interface ITransactionLogMeta {
+  [x: string]: string;
+}
 
 export interface ITransactionLog {
   timestamp: number;
@@ -32,7 +35,7 @@ export interface ITransactionLog {
   narration: string;
   notes?: string;
   source: string;
-  meta?: Map<string, string>;
+  meta?: ITransactionLogMeta;
 }
 
 export type IDTransactionLog = IEntity & ITransactionLog;
