@@ -20,8 +20,8 @@ export interface ITransaction {
 
 export type IDTransaction = IEntity & ITransaction;
 
-interface ITransactionLogMeta {
-  [x: string]: string;
+export interface ITransactionLogMeta {
+  [x: string]: any;
 }
 
 export interface ITransactionLog {
