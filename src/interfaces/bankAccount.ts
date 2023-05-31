@@ -23,10 +23,16 @@ export interface IPlaidContext {
   institutionId?: string;
 }
 
+export interface IFlinksContext {
+  loginId?: string;
+  institution?: string;
+  accountId?: string;
+}
+
 export interface IBankConnection {
   timestamp: number;
   vendor: Vendors;
-  context: IPlaidContext & IPaypalContext;
+  context: IPlaidContext | IFlinksContext | IPaypalContext;
 }
 
 export interface IBankAccount {
