@@ -32,7 +32,7 @@ export interface IFlinksContext {
 export interface IBankConnection {
   timestamp: number;
   vendor: Vendors;
-  context: IPlaidContext | IFlinksContext | IPaypalContext;
+  context: IPlaidContext & IFlinksContext & IPaypalContext;
 }
 
 export interface IBankAccount {
