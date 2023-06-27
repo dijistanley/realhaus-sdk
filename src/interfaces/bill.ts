@@ -30,6 +30,7 @@ export interface IBill {
   leaseId: string;
   debtorId: string;
   creditorId: string;
+  attachment?: IAttachment[];
 }
 
 export type IdBill = IEntity & IBill;
