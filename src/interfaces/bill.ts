@@ -36,8 +36,8 @@ export interface IBill {
 export type IdBill = IEntity & IBill;
 
 export interface IAttachment {
+  id: string;
   url: string;
-  type: string;
 }
 
 export interface IBillRequest {
@@ -46,5 +46,4 @@ export interface IBillRequest {
   senderId: string;
   amount: number;
   note: string;
-  attachment?: IAttachment[];
 }
