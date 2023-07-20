@@ -16,7 +16,7 @@ export enum BillType {
 
 export enum BillStatus {
   PENDING = 'PENDING',
-  PAID = 'PAID'
+  PAID = 'PAID',
 }
 
 export interface IBill {
@@ -30,14 +30,20 @@ export interface IBill {
   leaseId: string;
   debtorId: string;
   creditorId: string;
+  attachments?: IAttachment[];
 }
 
 export type IdBill = IEntity & IBill;
 
+export interface IAttachment {
+  id: string;
+  url: string;
+}
+
 export interface IBillRequest {
-  leaseId: string,
-  billId: string,
-  senderId: string,
-  amount: number,
-  note: string
-};
+  leaseId: string;
+  billId: string;
+  senderId: string;
+  amount: number;
+  note: string;
+}
