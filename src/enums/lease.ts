@@ -45,3 +45,9 @@ export enum LeaseAgreementSource {
   REALHAUS = "realhaus",
   NON_REALHAUS = "non-realhaus"
 }
+
+export enum ListingStatus {
+  DEACTIVATED = "Deactivated",
+  UNAVAILABLE = "Unavailable",
+  VACANT = "Vacant"
+}
