@@ -1,4 +1,10 @@
-import { FeePaymentFrequency, LeaseEndAction, LeaseAgreementStatus, OccupantRelationship, LeaseAgreementSource } from '../enums/lease';
+import {
+  FeePaymentFrequency,
+  LeaseEndAction,
+  LeaseAgreementStatus,
+  OccupantRelationship,
+  LeaseAgreementSource,
+} from '../enums/lease';
 import { IDescription } from './description';
 import { IEntity } from './entity';
 import { IListing, IProperty } from './property';
@@ -7,14 +13,14 @@ export type ILeaseListingInfo = Omit<IListing, 'propertyId'> & Omit<IProperty, '
 
 export interface UtilityCoverage {
   utility: string;
-  percentage: number
+  percentage: number;
 }
 export interface ILeasePolicy {
   petsAllowed: boolean;
   smokingAllowed: boolean;
   rentInsuranceProof: boolean;
   autoPaymentSetup: boolean;
-  utilitiesCovered: UtilityCoverage[]
+  utilitiesCovered: UtilityCoverage[];
 }
 
 export interface ILeaseFees {
@@ -61,6 +67,7 @@ export interface ILeaseAgreement {
   changeRequests: ILeaseChangeRequest[];
   source: LeaseAgreementSource;
   timestamp: number;
+  dueRentDay: number;
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
@@ -91,20 +98,20 @@ export interface ITenantLeaseInvite {
   firstname: string;
   lastname: string;
   email: string;
-  invitationSent?: boolean
+  invitationSent?: boolean;
 }
 
 export interface ILeaseAgreementDocument {
   title: string;
   file?: File;
-  url?: string
+  url?: string;
 }
 
-export type IdLeaseAgreementDocument = IEntity & ILeaseAgreementDocument
+export type IdLeaseAgreementDocument = IEntity & ILeaseAgreementDocument;
 
-export type IdTenantInviteLease = IEntity & ITenantLeaseInvite
+export type IdTenantInviteLease = IEntity & ITenantLeaseInvite;
 
 export interface IDocumentType {
   title?: string;
-  file?: File
+  file?: File;
 }
