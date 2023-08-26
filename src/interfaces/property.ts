@@ -32,6 +32,7 @@ export interface IListing {
   isSharedProperty: boolean;
   bedroomForRent: number;
   amenities: IAmenitiesInfo[];
+  isDeactivated?: boolean;
 }
 
 export type IdListing = IEntity & IListing;
