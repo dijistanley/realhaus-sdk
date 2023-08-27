@@ -11,6 +11,11 @@ import { IListing, IProperty } from './property';
 
 export type ILeaseListingInfo = Omit<IListing, 'propertyId'> & Omit<IProperty, 'ownerId'>;
 
+export enum IRentDueDay {
+  FIRST_OF_MONTH = 'First of month',
+  END_OF_MONTH = 'End of month',
+}
+
 export interface UtilityCoverage {
   utility: string;
   percentage: number;
@@ -67,7 +72,7 @@ export interface ILeaseAgreement {
   changeRequests: ILeaseChangeRequest[];
   source: LeaseAgreementSource;
   timestamp: number;
-  dueRentDay: number;
+  dueRentDay: IRentDueDay | number;
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
