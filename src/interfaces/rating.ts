@@ -3,7 +3,7 @@ import { IEntity } from './entity';
 export enum SubjectType {
   LEASE = 'Lease',
   LANDLORD = 'Landlord',
-  TENANT = 'Tenant'
+  TENANT = 'Tenant',
 }
 
 export enum GradeType {
@@ -12,7 +12,7 @@ export enum GradeType {
   CHECK_IN = 'Check-In',
   ACCURACY = 'Accuracy',
   LOCATION = 'Location',
-  VALUE = 'Value'
+  VALUE = 'Value',
 }
 
 export type Grades = {
@@ -42,4 +42,29 @@ export interface IRatings {
   maxRating: number;
   reviews: IReview[];
   averageGrades: Grades;
+}
+
+export enum LandlordGrades {
+  ACCURACY = 'Accuracy',
+  COMMUNICATION = 'Communication',
+  RESPECTFULNESS = 'Respectfulness',
+  DIFFICULTY = 'Difficulty',
+}
+
+export enum TenantGrades {
+  COMMUNICATION = 'Communication',
+  CLEANLINESS = 'Cleanliness',
+  RESPECTFULNESS = 'Respectfulness',
+  HOUSE_RULES = 'House rules',
+}
+
+export interface IReviews {
+  ratings: LandlordGrades | TenantGrades;
+  review: string;
+  timeStamp: number;
+}
+
+export interface IRatingsReview {
+  mindTerm: IReviews;
+  endTerm: IReviews;
 }
