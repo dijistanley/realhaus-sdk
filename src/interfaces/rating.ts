@@ -55,16 +55,19 @@ export enum TenantGrades {
   COMMUNICATION = 'Communication',
   CLEANLINESS = 'Cleanliness',
   RESPECTFULNESS = 'Respectfulness',
-  HOUSE_RULES = 'House rules',
+  HOUSE_RULES = 'House_Rules',
 }
 
-export interface IReviews {
-  ratings: LandlordGrades | TenantGrades;
+export type RatingsForTenant = { [grade in TenantGrades]: number }
+export type RatingsForLandlord = { [grade in LandlordGrades]: number }
+
+export interface ILeaseReview {
+  ratings: RatingsForTenant | RatingsForLandlord
   review: string;
   timeStamp: number;
 }
 
-export interface IRatingsReview {
-  mindTerm: IReviews;
-  endTerm: IReviews;
+export interface ILeaseRatingsReview {
+  middleOfTerm: ILeaseReview;
+  endOfTerm: ILeaseReview;
 }
