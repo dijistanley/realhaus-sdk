@@ -53,6 +53,6 @@ export enum ListingStatus {
 }
 
 export enum RentDueDay {
-  FIRST_OF_MONTH = 'First of month',
-  END_OF_MONTH = 'End of month',
+  FIRST_OF_MONTH = 'FIRST_OF_MONTH',
+  END_OF_MONTH = 'END_OF_MONTH',
 }
