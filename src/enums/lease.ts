@@ -1,24 +1,24 @@
 export enum LeaseEndAction {
-  TERMINATE = "TERMINATE",
-  RENEW_MONTHLY = "RENEW_MONTHLY"
+  TERMINATE = 'TERMINATE',
+  RENEW_MONTHLY = 'RENEW_MONTHLY',
 }
 
 export enum FeePaymentFrequency {
-  MONTHLY = "MONTHLY",
-  ONCE_FEE = "ONCE_FEE",
-  ONCE_DEPOSIT = "ONCE_DEPOSIT",
-  NONE = "NONE"
+  MONTHLY = 'MONTHLY',
+  ONCE_FEE = 'ONCE_FEE',
+  ONCE_DEPOSIT = 'ONCE_DEPOSIT',
+  NONE = 'NONE',
 }
 
 export enum LeaseAgreementStatus {
-  DRAFT = "draft",
-  PENDING_TENANT_SIGNATURE = "pending-tenant-signature",
-  SIGNED = "signed"
+  DRAFT = 'draft',
+  PENDING_TENANT_SIGNATURE = 'pending-tenant-signature',
+  SIGNED = 'signed',
 }
 
 export enum LeaseAgreementViewer {
   TENANT = 'Tenant',
-  LANDLORD = 'LANDLORD'
+  LANDLORD = 'LANDLORD',
 }
 
 export enum ConditionOPS {
@@ -38,16 +38,21 @@ export enum OccupantRelationship {
   SIBLING = 'Sibling',
   GRAND_PARENT = 'Grand Parent',
   GRAND_CHILD = 'Grand Child',
-  OTHER = 'Other'
+  OTHER = 'Other',
 }
 
 export enum LeaseAgreementSource {
-  REALHAUS = "realhaus",
-  NON_REALHAUS = "non-realhaus"
+  REALHAUS = 'realhaus',
+  NON_REALHAUS = 'non-realhaus',
 }
 
 export enum ListingStatus {
-  DEACTIVATED = "Deactivated",
-  UNAVAILABLE = "Unavailable",
-  VACANT = "Vacant"
+  DEACTIVATED = 'Deactivated',
+  UNAVAILABLE = 'Unavailable',
+  VACANT = 'Vacant',
+}
+
+export enum RentDueDay {
+  FIRST_OF_MONTH = 'FIRST_OF_MONTH',
+  END_OF_MONTH = 'END_OF_MONTH',
 }
