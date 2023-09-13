@@ -44,6 +44,21 @@ export interface IRatings {
   averageGrades: Grades;
 }
 
+export interface IRatingReviewTerm {
+  dateCreated: number;
+  dateDue: number;
+  ownerCompletedOn?: number;
+  tenantCompletedOn?: number;
+}
+
+export interface ILeaseRatingReviewDetails {
+  midterm: IRatingReviewTerm;
+  endterm: IRatingReviewTerm;
+  leaseAgreementId: string;
+  ownerId: string;
+  tenantId: string;
+}
+
 export enum LandlordGrades {
   ACCURACY = 'Accuracy',
   COMMUNICATION = 'Communication',
@@ -58,11 +73,11 @@ export enum TenantGrades {
   HOUSE_RULES = 'House_Rules',
 }
 
-export type RatingsForTenant = { [grade in TenantGrades]: number }
-export type RatingsForLandlord = { [grade in LandlordGrades]: number }
+export type RatingsForTenant = { [grade in TenantGrades]: number };
+export type RatingsForLandlord = { [grade in LandlordGrades]: number };
 
 export interface ILeaseReview {
-  ratings: RatingsForTenant | RatingsForLandlord
+  ratings: RatingsForTenant | RatingsForLandlord;
   review: string;
   timeStamp: number;
 }
