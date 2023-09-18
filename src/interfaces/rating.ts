@@ -86,3 +86,8 @@ export interface ILeaseRatingsReview {
   middleOfTerm: ILeaseReview;
   endOfTerm: ILeaseReview;
 }
+
+export enum LeaseTerm {
+  midterm = 'midterm',
+  endterm = 'endterm',
+}
