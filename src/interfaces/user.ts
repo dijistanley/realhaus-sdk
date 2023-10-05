@@ -76,4 +76,13 @@ export interface IEmergencyContact {
   phone: string;
 }
 
+export interface IServiceAgreementConsent {
+  userId: string;
+  timeStamp: number;
+  deviceInfo: {
+    userAgent: string;
+    operatingSystem: string;
+  };
+}
+
 export type ITenantInfo = ITenantProfile & IUserBio;
