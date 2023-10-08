@@ -108,15 +108,6 @@ export interface ILeaseAgreementDocument {
   url?: string;
 }
 
-export interface IServiceAgreementConsent {
-  userId: string;
-  timeStamp: number;
-  deviceInfo: {
-    userAgent: string;
-    operatingSystem: string;
-  };
-}
-
 export type IdLeaseAgreementDocument = IEntity & ILeaseAgreementDocument;
 
 export type IdTenantInviteLease = IEntity & ITenantLeaseInvite;
