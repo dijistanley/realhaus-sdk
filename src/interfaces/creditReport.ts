@@ -103,13 +103,7 @@ export interface ILegalItem{
   description: string;
   palintiff: string;
   caseNumber: string;
-  court_entity: string
+  courtEntity: string
 }
 
-interface IJudgement extends ILegalItem {
-  dateFiled: number;
-  dateSatisfied: number;
-  amount: number;
-  title: string;
-  palintiff: string;
-}
+export interface IJudgement extends ILegalItem {}
