@@ -46,13 +46,7 @@ interface ICreditReportAccounts {
   installmentAccountSummary: ICreditReportAccountSummary; // Loans: auto, student, etc
   otherAccountsSummary: ICreditReportAccountSummary;
 }
-interface IJudgement {
-  dateFiled: number;
-  dateSatisfied: number;
-  amount: number;
-  title: string;
-  palintiff: number;
-}
+
 
 interface ICollection {
   creditor: string;
@@ -72,10 +66,13 @@ interface IBankruptcy {
   dateClosed: number;
 }
 
+
+
 interface ICreditReportPublicRecord {
   bankruptcies: IBankruptcy[];
   collections: ICollection[];
   judgement: IJudgement[];
+  legalItems: ILegalItem[]
 }
 
 interface ITenancyEvictions {
@@ -98,3 +95,15 @@ export interface CreditScoreRange {
   lower: number;
   color: string;
 }
+
+export interface ILegalItem{
+  dateFiled: number;
+  dateSatisfied: number;
+  amount: number;
+  description: string;
+  palintiff: string;
+  caseNumber: string;
+  courtEntity: string
+}
+
+export interface IJudgement extends ILegalItem {}
