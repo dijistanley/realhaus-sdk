@@ -29,7 +29,7 @@ interface IEmployment {
   dateVerified: number;
 }
 
-interface ICreditReportAccountSummary {
+export interface ICreditReportAccountSummary {
   totalBalance: number;
   totalMaxLimit: number;
   creditUsePercent: number; // balance / creditLimit
