@@ -3,10 +3,14 @@ import { IAmenitiesInfo } from './amenities';
 import { IEntity } from './entity';
 
 export enum PropertyTypeEnum {
-  HOUSE = "house",
-  APARTMENT = "apartment",
-  BASEMENT = "basement",
-  BEDROOM = "bedroom"
+  HOUSE = 'house',
+  APARTMENT = 'apartment',
+  BASEMENT = 'basement',
+  CONDO = 'condo',
+  DUPLEX = 'duplex',
+  MOBILE_HOME = 'mobile_home',
+  ROOM = 'room',
+  TOWNHOUSE = 'townhouse',
 }
 
 export const Utilities = ["Heat", "Electricity", "Gas", "Water", "Internet", "Cable TV"]
