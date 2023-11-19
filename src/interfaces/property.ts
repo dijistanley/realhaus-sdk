@@ -8,7 +8,7 @@ export enum PropertyTypeEnum {
   BASEMENT = 'basement',
   CONDO = 'condo',
   DUPLEX = 'duplex',
-  MOBILE_HOME = 'mobile home',
+  MOBILE_HOME = 'mobile_home',
   ROOM = 'room',
   TOWNHOUSE = 'townhouse',
 }
