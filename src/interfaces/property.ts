@@ -19,6 +19,7 @@ export const Children = [
   "Suitable for children (2–12 years)",
   "Suitable for infants (under 2 years)",
 ];
+export const OtherHouseRules = ["Smoking", "Events"];
 
 export interface IProperty {
   ownerId: string;
