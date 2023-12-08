@@ -117,4 +117,5 @@ export type IdTenantInviteLease = IEntity & ITenantLeaseInvite;
 export interface IDocumentType {
   title?: string;
   file?: File;
+  tag?: AddedLeaseAgreementDocument;
 }
