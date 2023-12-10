@@ -13,8 +13,13 @@ export enum PropertyTypeEnum {
   TOWNHOUSE = 'townhouse',
 }
 
-export const Utilities = ["Heat", "Electricity", "Gas", "Water", "Internet", "Cable TV"]
-export const Pets = ["Small Dogs", "Large Dogs", "Cats", "Other Pets"]
+export const Utilities = ["Heat", "Electricity", "Gas", "Water", "Internet", "Cable TV"];
+export const Pets = ["Small Dogs", "Large Dogs", "Cats", "Other Pets"];
+export const Children = [
+  "Suitable for children (2–12 years)",
+  "Suitable for infants (under 2 years)",
+];
+export const OtherHouseRules = ["Smoking", "Events"];
 
 export interface IProperty {
   ownerId: string;
