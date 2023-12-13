@@ -18,7 +18,7 @@ export enum LeaseAgreementStatus {
 }
 
 export enum AddedLeaseAgreementDocument {
-  SUPPLEMENTARY = 'supplementary',
+  ADDENDUM = 'addendum',
 }
 
 export enum LeaseAgreementViewer {
