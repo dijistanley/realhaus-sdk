@@ -5,6 +5,7 @@ import {
   OccupantRelationship,
   LeaseAgreementSource,
   RentDueDay,
+  AddedLeaseAgreementDocument,
 } from '../enums/lease';
 import { IDescription } from './description';
 import { IEntity } from './entity';
@@ -106,6 +107,7 @@ export interface ILeaseAgreementDocument {
   title: string;
   file?: File;
   url?: string;
+  tag?: AddedLeaseAgreementDocument;
 }
 
 export type IdLeaseAgreementDocument = IEntity & ILeaseAgreementDocument;
@@ -115,4 +117,5 @@ export type IdTenantInviteLease = IEntity & ITenantLeaseInvite;
 export interface IDocumentType {
   title?: string;
   file?: File;
+  tag?: AddedLeaseAgreementDocument;
 }

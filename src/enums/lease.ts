@@ -17,6 +17,10 @@ export enum LeaseAgreementStatus {
   TERMINATED = 'Terminated',
 }
 
+export enum AddedLeaseAgreementDocument {
+  ADDENDUM = 'addendum',
+}
+
 export enum LeaseAgreementViewer {
   TENANT = 'Tenant',
   LANDLORD = 'LANDLORD',
