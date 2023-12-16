@@ -123,7 +123,7 @@ export interface IDocumentType {
 
 export interface IRequestDocumentType {
   title: string;
-  document: string;
+  description: string;
   timestamp: number;
   status: LeaseRequestDocStatus;
 }
