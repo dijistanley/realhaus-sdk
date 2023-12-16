@@ -61,3 +61,8 @@ export enum RentDueDay {
   FIRST_OF_MONTH = 'FIRST_OF_MONTH',
   END_OF_MONTH = 'END_OF_MONTH',
 }
+
+export enum LeaseRequestDocStatus {
+  PENDING = 'Pending',
+  FULFILLED = 'Fulfilled',
+}
