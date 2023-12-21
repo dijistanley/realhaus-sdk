@@ -18,7 +18,8 @@ export enum LeaseAgreementStatus {
 }
 
 export enum AddedLeaseAgreementDocument {
-  ADDENDUM = 'addendum',
+  ADDENDUM = 'ADDENDUM',
+  REQUESTED_ADDENDUM = 'REQUESTED_ADDENDUM',
 }
 
 export enum LeaseAgreementViewer {
