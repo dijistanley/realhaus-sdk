@@ -109,6 +109,7 @@ export interface ILeaseAgreementDocument {
   file?: File;
   url?: string;
   tag?: AddedLeaseAgreementDocument;
+  ownerId: string;
 }
 
 export type IdLeaseAgreementDocument = IEntity & ILeaseAgreementDocument;
