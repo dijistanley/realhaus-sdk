@@ -18,7 +18,7 @@ export enum LeaseAgreementStatus {
 }
 
 export enum AddedLeaseAgreementDocument {
-  ADDENDUM = 'addendum',
+  ADDENDUM = 'ADDENDUM',
 }
 
 export enum LeaseAgreementViewer {
@@ -60,4 +60,9 @@ export enum ListingStatus {
 export enum RentDueDay {
   FIRST_OF_MONTH = 'FIRST_OF_MONTH',
   END_OF_MONTH = 'END_OF_MONTH',
+}
+
+export enum LeaseRequestDocStatus {
+  PENDING = 'Pending',
+  FULFILLED = 'Fulfilled',
 }
