@@ -31,6 +31,7 @@ export interface ITransactionLog {
   amount: number;
   receiverId: string;
   status: TransactionStatus;
+  statusMsg?: string;
   referenceId?: string;
   narration: string;
   notes?: string;
