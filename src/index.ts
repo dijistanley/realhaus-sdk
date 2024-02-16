@@ -42,3 +42,5 @@ export * from './interfaces/wallet';
 export * from './interfaces/bill';
 export * from './interfaces/prospectiveTenant';
 export * from './interfaces/mail';
+export * from './enums/coupon';
+export * from './interfaces/coupon';
