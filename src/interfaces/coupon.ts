@@ -10,7 +10,7 @@ export interface ICoupon {
 export interface IUserCoupon {
   start: number;
   end: number;
-  couponID: string;
+  couponId: string;
 }
 
 export interface IUserFirstLeaseHalfOffCoupon extends IUserCoupon {
