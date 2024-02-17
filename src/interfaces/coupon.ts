@@ -11,6 +11,9 @@ export interface IUserCoupon {
   start: number;
   end: number;
   couponID: string;
+}
+
+export interface IUserFirstLeaseHalfOffCoupon extends IUserCoupon {
   usage: number;
-  leaseAgreementIds: string[];
+  leaseAgreementId: string;
 }
