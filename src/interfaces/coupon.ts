@@ -1,4 +1,4 @@
-import { CouponStatus, CouponTitle, CouponType } from "../enums/coupon";
+import { CouponStatus, CouponTitle, CouponType } from '../enums/coupon';
 
 export interface ICoupon {
   title: CouponTitle;
@@ -12,4 +12,5 @@ export interface IUserCoupon {
   end: number;
   couponID: string;
   usage: number;
+  leaseAgreementIds: string[];
 }
