@@ -1,14 +1,14 @@
 export enum CouponTitle {
-  First_Lease_Half_Off = "First_Lease_Half_Off",
-  REFERRAL = "REFERRAL",
+  FIRST_LEASE_HALF_OFF = 'FIRST_LEASE_HALF_OFF',
+  REFERRAL = 'REFERRAL',
 }
 
 export enum CouponType {
-  PERCENTAGE = "PERCENTAGE",
-  DOLLAR = "DOLLAR",
+  PERCENTAGE = 'PERCENTAGE',
+  DOLLAR = 'DOLLAR',
 }
 
 export enum CouponStatus {
-  ACTIVE = "ACTIVE",
-  INACTIVE = "INACTIVE",
+  ACTIVE = 'ACTIVE',
+  INACTIVE = 'INACTIVE',
 }
