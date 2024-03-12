@@ -71,7 +71,7 @@ export interface ILeaseAgreement {
   source: LeaseAgreementSource;
   timestamp: number;
   dueRentDay: RentDueDay | number;
-  autoDebitSetup: Boolean;
+  autoDebitSetup: boolean;
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
