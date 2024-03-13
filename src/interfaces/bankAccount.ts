@@ -2,8 +2,8 @@ import { IEntity } from './entity';
 import { BankAccountPurpose, Vendors } from '../enums/bankAccount';
 
 export interface IPaypalContext {
-  payer_id?: string;
-  email?: string;
+  payer_id: string;
+  email: string;
 }
 
 export interface IPaypalToken {
@@ -16,17 +16,17 @@ export interface IPaypalToken {
 }
 
 export interface IPlaidContext {
-  accessToken?: string;
-  requestId?: string;
-  itemId?: string;
-  institution?: string;
-  institutionId?: string;
+  accessToken: string;
+  requestId: string;
+  itemId: string;
+  institution: string;
+  institutionId: string;
 }
 
 export interface IFlinksContext {
-  loginId?: string;
-  institution?: string;
-  accountId?: string;
+  loginId: string;
+  institution: string;
+  accountId: string;
 }
 
 export interface IBankConnection {
