@@ -42,9 +42,16 @@ export interface IBankAccount {
 
 export interface IExchangePlaidLinkTokenRequest {
   publicToken: string;
-  institution?: string;
-  institutionId?: string;
+  institution: string;
+  institutionId: string;
   bankAccountPurpose: BankAccountPurpose;
 }
 
 export type IdBankAccount = IEntity & IBankAccount;
+
+export interface IBankEftAccountInfo {
+  account: string;
+  accountId: string;
+  institution: string;
+  branch: string;
+}
