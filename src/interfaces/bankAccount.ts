@@ -55,3 +55,8 @@ export interface IBankEftAccountInfo {
   institution: string;
   branch: string;
 }
+
+export type IPreAuthDebitMandateAgreement = Omit<IBankEftAccountInfo, 'accountId'> & {
+  agreementDate: number;
+  accountHolder: string;
+}
