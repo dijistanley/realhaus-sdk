@@ -12,7 +12,7 @@ export interface IUserBio {
 export interface IProfile extends IUserBio {
   isVerified: boolean;
   verifyContext: IVerifyContext;
-  stripeId: string;
+  stripeId?: string;
 }
 
 export interface IVerifyContext {
