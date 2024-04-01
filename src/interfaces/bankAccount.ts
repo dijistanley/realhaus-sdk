@@ -63,7 +63,6 @@ export type IPreAuthDebitMandateAgreement = Omit<IBankEftAccountInfo, 'accountId
 }
 
 export interface IConfirmAutoDebitAgreementRequest {
-  amount: number;
   leaseId: string;
   mandate: IPreAuthDebitMandateAgreement;
   ipAddress: string;
