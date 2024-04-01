@@ -68,3 +68,8 @@ export interface IConfirmAutoDebitAgreementRequest {
   ipAddress: string;
   userAgent: string;
 }
+
+export interface IConfirmAutoDebitAgreementResponse {
+  stripePaymentId: string;
+  timestamp: number;
+}
