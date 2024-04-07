@@ -2,8 +2,8 @@ import { IEntity } from './entity';
 import { BankAccountPurpose, Vendors } from '../enums/bankAccount';
 
 export interface IPaypalContext {
-  payer_id?: string;
-  email?: string;
+  payer_id: string;
+  email: string;
 }
 
 export interface IPaypalToken {
@@ -16,17 +16,17 @@ export interface IPaypalToken {
 }
 
 export interface IPlaidContext {
-  accessToken?: string;
-  requestId?: string;
-  itemId?: string;
-  institution?: string;
-  institutionId?: string;
+  accessToken: string;
+  requestId: string;
+  itemId: string;
+  institution: string;
+  institutionId: string;
 }
 
 export interface IFlinksContext {
-  loginId?: string;
-  institution?: string;
-  accountId?: string;
+  loginId: string;
+  institution: string;
+  accountId: string;
 }
 
 export interface IBankConnection {
@@ -42,9 +42,34 @@ export interface IBankAccount {
 
 export interface IExchangePlaidLinkTokenRequest {
   publicToken: string;
-  institution?: string;
-  institutionId?: string;
+  institution: string;
+  institutionId: string;
   bankAccountPurpose: BankAccountPurpose;
 }
 
 export type IdBankAccount = IEntity & IBankAccount;
+
+export interface IBankEftAccountInfo {
+  account: string;
+  accountId: string;
+  institution: string;
+  branch: string;
+}
+
+export type IPreAuthDebitMandateAgreement = Omit<IBankEftAccountInfo, 'accountId'> & {
+  email: string;
+  agreementDate: number;
+  accountHolder: string;
+}
+
+export interface IConfirmAutoDebitAgreementRequest {
+  leaseId: string;
+  mandate: IPreAuthDebitMandateAgreement;
+  ipAddress: string;
+  userAgent: string;
+}
+
+export interface IConfirmAutoDebitAgreementResponse {
+  stripePaymentId: string;
+  timestamp: number;
+}

@@ -66,3 +66,10 @@ export enum LeaseRequestDocStatus {
   PENDING = 'Pending',
   FULFILLED = 'Fulfilled',
 }
+
+export enum AutoDebitSetupStatus {
+  INCOMPLETE = 'Incomplete',
+  PENDING = 'Pending',
+  COMPLETED = 'Completed',
+  FAILED = 'Failed',
+}

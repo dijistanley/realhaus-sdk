@@ -7,6 +7,7 @@ import {
   RentDueDay,
   AddedLeaseAgreementDocument,
   LeaseRequestDocStatus,
+  AutoDebitSetupStatus,
 } from '../enums/lease';
 import { IDescription } from './description';
 import { IEntity } from './entity';
@@ -71,6 +72,7 @@ export interface ILeaseAgreement {
   source: LeaseAgreementSource;
   timestamp: number;
   dueRentDay: RentDueDay | number;
+  autoDebitSetup?: IAutoDebitSetup;
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
@@ -127,4 +129,10 @@ export interface IRequestDocumentType {
   description: string;
   timestamp: number;
   status: LeaseRequestDocStatus;
+}
+
+export interface IAutoDebitSetup {
+  status: AutoDebitSetupStatus;
+  timestamp: number;
+  stripePaymentId?: string;
 }
