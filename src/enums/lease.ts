@@ -14,7 +14,7 @@ export enum LeaseAgreementStatus {
   DRAFT = 'draft',
   PENDING_TENANT_SIGNATURE = 'pending-tenant-signature',
   SIGNED = 'signed',
-  REJECTED = 'rejected',
+  CANCELED = 'canceled',
   TERMINATED = 'Terminated',
 }
 
