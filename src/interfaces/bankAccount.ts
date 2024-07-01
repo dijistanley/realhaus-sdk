@@ -21,6 +21,7 @@ export interface IPlaidContext {
   itemId: string;
   institution: string;
   institutionId: string;
+  stripeBankAccountToken: string;
 }
 
 export interface IFlinksContext {
