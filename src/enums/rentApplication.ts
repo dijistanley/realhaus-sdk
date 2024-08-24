@@ -3,5 +3,4 @@ export enum RentApplicationStatus {
   APPROVED = 'approved',
   REJECTED = 'rejected',
   WITHDRAWN = 'withdrawn',
-  RENEWED = 'renewed',
 }
