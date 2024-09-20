@@ -53,9 +53,8 @@ export enum LeaseAgreementSource {
 }
 
 export enum ListingStatus {
-  DEACTIVATED = 'Deactivated',
-  UNAVAILABLE = 'Unavailable',
-  VACANT = 'Vacant',
+  LISTED = 'Listed',
+  UNLISTED = 'UnListed',
 }
 
 export enum RentDueDay {
