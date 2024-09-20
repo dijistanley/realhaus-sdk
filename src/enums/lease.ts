@@ -54,7 +54,7 @@ export enum LeaseAgreementSource {
 
 export enum ListingStatus {
   LISTED = 'Listed',
-  UNLISTED = 'UnListed',
+  UNLISTED = 'Unlisted',
 }
 
 export enum RentDueDay {
