@@ -4,7 +4,7 @@ export enum TransactionType {
 }
 
 export enum TrxLogType {
-  DEPOSIT = 'DEPOSIT', // FUND WALLET
+  PAYMENT = 'PAYMENT', // MAKE A PAYMENT
   WITHDRAW = 'WITHDRAW', // WITHDRAW FUNDS
   TRANSFER = 'TRANSFER' // TRANSFER FUNDS BETWEEN ACCOUNTS
 }

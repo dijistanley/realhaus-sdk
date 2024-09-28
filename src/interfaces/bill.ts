@@ -31,7 +31,9 @@ export interface IBill {
   leaseId: string;
   debtorId: string;
   creditorId: string;
+  note?: string;
   attachments?: IAttachment[];
+  trxLogRef?: string;
 }
 
 export type IdBill = IEntity & IBill;

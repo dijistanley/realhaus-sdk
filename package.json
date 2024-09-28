@@ -1,6 +1,6 @@
 {
     "name": "realhaus-sdk",
-    "version": "1.0.23",
+    "version": "1.0.24",
     "description": "SDK for Realhaus Technologies Inc",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
