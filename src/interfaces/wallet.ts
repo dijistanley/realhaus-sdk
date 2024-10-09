@@ -22,6 +22,9 @@ export type IDTransaction = IEntity & ITransaction;
 
 export interface ITransactionLogMeta {
   [x: string]: any;
+  trxfees?: number;
+  leaseId?: string;
+  billId?: string;
 }
 
 export interface ITransactionLog {
