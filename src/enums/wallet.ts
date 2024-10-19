@@ -1,6 +1,7 @@
 export enum TransactionType {
   CREDIT = 'CREDIT',
-  DEBIT = 'DEBIT'
+  DEBIT = 'DEBIT',
+  OTHER = 'OTHER'
 }
 
 export enum TrxLogType {
