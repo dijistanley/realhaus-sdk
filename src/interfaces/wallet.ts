@@ -1,10 +1,18 @@
-import { TransactionStatus, TransactionType, TrxLogType } from '../enums/wallet';
-import { IEntity } from './entity';
+import {
+  TransactionStatus,
+  TransactionType,
+  TrxLogType,
+} from "../enums/wallet";
+import { IEntity } from "./entity";
 
 export interface IWallet {
   amount: number;
   owner: string;
   lastTransactionId?: string;
+  withdrawInfo?: {
+    lastProcessedTranasctionId: string;
+    timestamp: number;
+  };
 }
 
 export type IDWallet = IEntity & IWallet;
@@ -16,6 +24,9 @@ export interface ITransaction {
   timestamp: number;
   notes: string;
   trxLogId: string;
+  isWithdraw?: boolean;
+  isWithdrawRefund?: boolean;
+  refTrxIds?: string[];
 }
 
 export type IDTransaction = IEntity & ITransaction;
@@ -25,6 +36,8 @@ export interface ITransactionLogMeta {
   trxfees?: number;
   leaseId?: string;
   billId?: string;
+  interac?: { url?: string; securityQuestion: string; securityAnswer: string };
+  vendor?: { req: any; resp: any };
 }
 
 export interface ITransactionLog {
