@@ -57,3 +57,19 @@ export const provinces: ProvinceInfo[] = [
     abbreviation: "YT"
   }
 ]
+
+export const ProvinceTimeZones = {
+  'ON': 'Canada/Eastern',
+  'PE': 'Canada/Atlantic',
+  'QC': 'Canada/Eastern',
+  'SK': 'Canada/Saskatchewan',
+  'YT': 'Canada/Yukon',
+  'AB': 'Canada/Mountain',
+  'BC': 'Canada/Pacific',
+  'MB': 'Canada/Central',
+  'NB': 'Canada/Atlantic',
+  'NL': 'Canada/Newfoundland',
+  'NT': 'Canada/Mountain',
+  'NS': 'Canada/Atlantic',
+  'NU': 'Canada/Mountain'
+}
