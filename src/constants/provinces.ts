@@ -1,75 +1,73 @@
 export interface ProvinceInfo {
   name: string;
   abbreviation: string;
+  timeZone?: string;
 }
 
 export const provinces: ProvinceInfo[] = [
   {
     name: "Alberta",
-    abbreviation: "AB"
+    abbreviation: "AB",
+    timeZone: 'Canada/Mountain'
   },
   {
     name: "British Columbia",
-    abbreviation: "BC"
+    abbreviation: "BC",
+    timeZone: 'Canada/Pacific'
   },
   {
     name: "Manitoba",
-    abbreviation: "MB"
+    abbreviation: "MB",
+    timeZone: 'Canada/Central'
   },
   {
     name: "New Brunswick",
-    abbreviation: "NB"
+    abbreviation: "NB",
+    timeZone: 'Canada/Atlantic'
   },
   {
     name: "Newfoundland and Labrador",
-    abbreviation: "NL"
+    abbreviation: "NL",
+    timeZone: 'Canada/Newfoundland'
   },
   {
     name: "Northwest Territories",
-    abbreviation: "NT"
+    abbreviation: "NT",
+    timeZone: 'Canada/Mountain'
   },
   {
     name: "Nova Scotia",
-    abbreviation: "NS"
+    abbreviation: "NS",
+    timeZone: 'Canada/Atlantic'
   },
   {
     name: "Nunavut",
-    abbreviation: "NU"
+    abbreviation: "NU",
+    timeZone: 'Canada/Mountain'
   },
   {
     name: "Ontario",
-    abbreviation: "ON"
+    abbreviation: "ON",
+    timeZone: 'Canada/Eastern'
   },
   {
     name: "Prince Edward Island",
-    abbreviation: "PE"
+    abbreviation: "PE",
+    timeZone: 'Canada/Atlantic'
   },
   {
     name: "Quebec",
-    abbreviation: "QC"
+    abbreviation: "QC",
+    timeZone: 'Canada/Eastern'
   },
   {
     name: "Saskatchewan",
-    abbreviation: "SK"
+    abbreviation: "SK",
+    timeZone: 'Canada/Saskatchewan'
   },
   {
     name: "Yukon Territory",
-    abbreviation: "YT"
+    abbreviation: "YT",
+    timeZone: 'Canada/Yukon'
   }
 ]
-
-export const ProvinceTimeZones = {
-  'ON': 'Canada/Eastern',
-  'PE': 'Canada/Atlantic',
-  'QC': 'Canada/Eastern',
-  'SK': 'Canada/Saskatchewan',
-  'YT': 'Canada/Yukon',
-  'AB': 'Canada/Mountain',
-  'BC': 'Canada/Pacific',
-  'MB': 'Canada/Central',
-  'NB': 'Canada/Atlantic',
-  'NL': 'Canada/Newfoundland',
-  'NT': 'Canada/Mountain',
-  'NS': 'Canada/Atlantic',
-  'NU': 'Canada/Mountain'
-}
