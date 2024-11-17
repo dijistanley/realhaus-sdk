@@ -7,9 +7,12 @@ export interface ICreditReport {
   dateCreated: number;
   datePulled: number;
   personalInformation: IPersonalInformation;
-  accounts: ICreditReportAccounts;
-  publicRecords: ICreditReportPublicRecord;
-  evictions: ITenancyEvictions[];
+  accounts?: ICreditReportAccounts;
+  accountsSummary?: ICreditReportAccountSummary;
+  publicRecords?: ICreditReportPublicRecord;
+  publicRecordsSummary?: ICreditReportPublicRecordSummary;
+  evictions?: ITenancyEvictions[];
+  version?: string;
 }
 
 type ICreditReportAddress = IAddress & { dateReported: number };
@@ -39,14 +42,15 @@ export interface ICreditReportAccountSummary {
   totalLatePayment60: number;
   totalLatePayment90: number;
   monthlyPayments: number;
+  hasLatePayments?: boolean;
 }
+
 interface ICreditReportAccounts {
   revolvingAccountSummary: ICreditReportAccountSummary;
   mortgageAccountSummary: ICreditReportAccountSummary;
   installmentAccountSummary: ICreditReportAccountSummary; // Loans: auto, student, etc
   otherAccountsSummary: ICreditReportAccountSummary;
 }
-
 
 interface ICollection {
   creditor: string;
@@ -66,13 +70,17 @@ interface IBankruptcy {
   dateClosed: number;
 }
 
-
-
 interface ICreditReportPublicRecord {
   bankruptcies: IBankruptcy[];
   collections: ICollection[];
   judgement: IJudgement[];
   legalItems: ILegalItem[]
+}
+interface ICreditReportPublicRecordSummary {
+  hasBankruptcies: boolean;
+  hasCollections: boolean;
+  hasJudgements: boolean;
+  hasLegalItems: boolean;
 }
 
 interface ITenancyEvictions {
