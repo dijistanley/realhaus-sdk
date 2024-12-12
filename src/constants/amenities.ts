@@ -91,7 +91,7 @@ export const Amenities: IAmenitiesInfo[] = [
   },
   {
     key: "secured_garage",
-    value: "Secured Garage"
+    value: "Garage Parking"
   },
   {
     key: "access_to_public_transportation",
@@ -103,7 +103,7 @@ export const Amenities: IAmenitiesInfo[] = [
   },
   {
     key: "guest_parking",
-    value: "Guest Parking"
+    value: "Visitor Parking"
   },
   {
     key: "bike_storage",
