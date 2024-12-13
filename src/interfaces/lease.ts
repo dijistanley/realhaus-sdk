@@ -67,6 +67,7 @@ export interface ILeaseAgreement {
   signatures: ILeaseSignature[];
   signatureRequestDate?: number;
   status: LeaseAgreementStatus;
+  statusUpdatedOn?: number;
   occupants: IOccupant[];
   changeRequests: ILeaseChangeRequest[];
   source: LeaseAgreementSource;
