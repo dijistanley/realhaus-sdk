@@ -53,7 +53,6 @@ export type IdPricedListingProperty = IListingTerm & IListing & IProperty;
 export interface IPolicy {
   text: string;
   suffix?: string;
-  value: boolean;
 }
 
 export interface IListingPolicy {
