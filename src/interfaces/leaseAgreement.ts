@@ -1,5 +1,5 @@
-import { ConditionOPS } from "../enums/lease";
-import { PropertyTypeEnum } from "./property";
+import { ConditionOPS } from '../enums/lease';
+import { PropertyTypeEnum } from './property';
 
 export interface ILeaseAgreementTemplate {
   sections: ILeaseAgreementTemplateSection[];
@@ -56,4 +56,6 @@ export interface ILeaseAgreementTemplateData {
   SMOKING_FEE_AMOUNT: number;
   KEY_DEPOSIT_AMOUNT: number;
   SERVICES_UTILITIES_INCLUDED: string;
+  PET_DAMAGE_DEPOSIT_AMOUNT: number;
+  VACATE_REASON: string;
 }
