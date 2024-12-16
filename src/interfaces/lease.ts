@@ -75,6 +75,7 @@ export interface ILeaseAgreement {
   dueRentDay: RentDueDay | number;
   autoDebitSetup?: IAutoDebitSetup;
   initialLeaseAgreementId?: string;
+  vacateReason?: string;
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
