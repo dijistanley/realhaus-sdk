@@ -1,9 +1,5 @@
-import {
-  TransactionStatus,
-  TransactionType,
-  TrxLogType,
-} from "../enums/wallet";
-import { IEntity } from "./entity";
+import { TransactionStatus, TransactionType, TrxLogType } from '../enums/wallet';
+import { IEntity } from './entity';
 
 export interface IWallet {
   amount: number;
@@ -34,6 +30,7 @@ export type IDTransaction = IEntity & ITransaction;
 export interface ITransactionLogMeta {
   [x: string]: any;
   trxfees?: number;
+  trxLogRef?: string;
   leaseId?: string;
   billId?: string;
   interac?: { url?: string; securityQuestion: string; securityAnswer: string };
