@@ -8,12 +8,13 @@ import {
   AddedLeaseAgreementDocument,
   LeaseRequestDocStatus,
   AutoDebitSetupStatus,
-} from '../enums/lease';
-import { IDescription } from './description';
-import { IEntity } from './entity';
-import { IListing, IProperty } from './property';
+} from "../enums/lease";
+import { IDescription } from "./description";
+import { IEntity } from "./entity";
+import { IListing, IProperty } from "./property";
 
-export type ILeaseListingInfo = Omit<IListing, 'propertyId'> & Omit<IProperty, 'ownerId'>;
+export type ILeaseListingInfo = Omit<IListing, "propertyId"> &
+  Omit<IProperty, "ownerId">;
 
 export interface UtilityCoverage {
   utility: string;
@@ -75,6 +76,7 @@ export interface ILeaseAgreement {
   dueRentDay: RentDueDay | number;
   autoDebitSetup?: IAutoDebitSetup;
   initialLeaseAgreementId?: string;
+  isExipred?: boolean;
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
