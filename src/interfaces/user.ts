@@ -13,6 +13,7 @@ export interface IProfile extends IUserBio {
   isVerified: boolean;
   verifyContext: IVerifyContext;
   stripeId?: string;
+  isFlagged?: boolean;
 }
 
 export interface IVerifyContext {
