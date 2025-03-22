@@ -38,6 +38,7 @@ export interface IOccupation {
   income: number;
   incomeType: IncomeType;
   manager: string;
+  paystub?: IDocument;
 }
 
 export interface IUserInfo {
@@ -85,6 +86,11 @@ export interface IServiceAgreementConsent {
     userAgent: string;
     operatingSystem: string;
   };
+}
+
+export interface IDocument {
+  title: string;
+  url: string;
 }
 
 export type ITenantInfo = ITenantProfile & IUserBio;
