@@ -29,6 +29,11 @@ export enum IncomeType {
   YEARLY = 'yearly',
 }
 
+export enum ProofOfOccupationType {
+  PAYSTUB = 'PAYSTUB',
+  EMPLOYMENT_LETTER = 'EMPLOYMENT_LETTTER',
+}
+
 export interface IOccupation {
   status: string;
   employer: string;
@@ -38,6 +43,7 @@ export interface IOccupation {
   income: number;
   incomeType: IncomeType;
   manager: string;
+  proofOfOccupation?: IProofOfOccupationDocument;
 }
 
 export interface IUserInfo {
@@ -85,6 +91,11 @@ export interface IServiceAgreementConsent {
     userAgent: string;
     operatingSystem: string;
   };
+}
+
+export interface IProofOfOccupationDocument {
+  type: ProofOfOccupationType;
+  fileUrl: string;
 }
 
 export type ITenantInfo = ITenantProfile & IUserBio;
