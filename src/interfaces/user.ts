@@ -43,7 +43,7 @@ export interface IOccupation {
   income: number;
   incomeType: IncomeType;
   manager: string;
-  paystub?: IProofOfOccupationDocument;
+  proofOfOccupation?: IProofOfOccupationDocument;
 }
 
 export interface IUserInfo {
