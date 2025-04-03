@@ -8,7 +8,7 @@ export interface ICreditReportSeatsUsage {
 }
 
 export interface ICreditReportSeatsPurchases {
-  amountPaid: number;
+  amount: number;
   noOfSeats: number;
   trxRefId: string;
   timestamp: number;
