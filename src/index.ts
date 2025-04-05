@@ -44,3 +44,4 @@ export * from './interfaces/prospectiveTenant';
 export * from './interfaces/mail';
 export * from './enums/coupon';
 export * from './interfaces/coupon';
+export * from './interfaces/creditReportSeats';
