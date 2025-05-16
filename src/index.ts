@@ -18,6 +18,7 @@ export * from './enums/rentApplication';
 export * from './enums/bankAccount';
 export * from './enums/inputField';
 export * from './enums/wallet';
+export * from './enums/userManagement';
 
 /**
  * Export interfaces
