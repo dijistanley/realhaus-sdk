@@ -8,22 +8,28 @@ import {
   AddedLeaseAgreementDocument,
   LeaseRequestDocStatus,
   AutoDebitSetupStatus,
-} from "../enums/lease";
-import { IDescription } from "./description";
-import { IEntity } from "./entity";
-import { IListing, IProperty } from "./property";
+  RentInsuranceStatus,
+} from '../enums/lease';
+import { IDescription } from './description';
+import { IDocument, IEntity } from './entity';
+import { IListing, IProperty } from './property';
 
-export type ILeaseListingInfo = Omit<IListing, "propertyId"> &
-  Omit<IProperty, "ownerId">;
+export type ILeaseListingInfo = Omit<IListing, 'propertyId'> & Omit<IProperty, 'ownerId'>;
 
 export interface UtilityCoverage {
   utility: string;
   percentage: number;
 }
+
+export interface IInsuranceDoc extends IDocument {
+  status: RentInsuranceStatus;
+  RejectedReason?: string;
+}
 export interface ILeasePolicy {
   petsAllowed: boolean;
   smokingAllowed: boolean;
   rentInsuranceProof: boolean;
+  tenantInsuranceDoc?: IInsuranceDoc;
   autoPaymentSetup: boolean;
   utilitiesCovered: UtilityCoverage[];
 }

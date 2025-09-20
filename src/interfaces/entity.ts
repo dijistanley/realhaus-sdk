@@ -1,3 +1,9 @@
 export interface IEntity {
-  id: string
+  id: string;
+}
+
+export interface IDocument {
+  title: string;
+  dateUploaded: string;
+  url: string;
 }
