@@ -23,7 +23,7 @@ export interface UtilityCoverage {
 
 export interface IInsuranceDoc extends IDocument {
   status: RentInsuranceStatus;
-  RejectedReason?: string;
+  rejectedReason?: string;
 }
 export interface ILeasePolicy {
   petsAllowed: boolean;
