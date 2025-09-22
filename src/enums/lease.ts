@@ -18,6 +18,12 @@ export enum LeaseAgreementStatus {
   TERMINATED = 'Terminated',
 }
 
+export enum RentInsuranceStatus {
+  PENDING = 'Pending',
+  ACCEPTED = 'Accepted',
+  REJECTED = 'Rejected',
+}
+
 export enum AddedLeaseAgreementDocument {
   ADDENDUM = 'ADDENDUM',
 }
