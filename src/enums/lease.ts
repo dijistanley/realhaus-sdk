@@ -22,6 +22,7 @@ export enum RentInsuranceStatus {
   PENDING = 'Pending',
   ACCEPTED = 'Accepted',
   REJECTED = 'Rejected',
+  UPLOADED = 'Uploaded',
 }
 
 export enum AddedLeaseAgreementDocument {
