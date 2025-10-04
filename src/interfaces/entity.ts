@@ -4,6 +4,6 @@ export interface IEntity {
 
 export interface IDocument {
   title: string;
-  dateUploaded: string;
+  dateUploaded: number;
   url: string;
 }
