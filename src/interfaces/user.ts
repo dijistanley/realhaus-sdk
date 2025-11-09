@@ -72,7 +72,7 @@ export interface IResidenceInfo {
   moveoutDate?: number;
 }
 export interface ITenantProfile {
-  occupation: IOccupation;
+  occupation: IOccupation[];
   identity: IIdentity;
   address: IResidenceInfo;
   previousNonRentalAddresses: IResidenceInfo[];
