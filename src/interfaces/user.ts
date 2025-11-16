@@ -31,7 +31,7 @@ export enum IncomeType {
 
 export enum ProofOfOccupationType {
   PAYSTUB = 'PAYSTUB',
-  EMPLOYMENT_LETTER = 'EMPLOYMENT_LETTTER',
+  EMPLOYMENT_LETTER = 'EMPLOYMENT_LETTER',
 }
 
 export interface IOccupation {
