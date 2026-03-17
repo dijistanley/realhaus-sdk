@@ -4,7 +4,7 @@
 
 **realhaus-sdk** is a TypeScript SDK for Realhaus Technologies Inc — a real estate rental management platform. It is a **pure type definitions library** (zero external runtime dependencies) exporting shared interfaces, enums, and constants used across Realhaus frontend and backend services.
 
-- Current version: `1.0.32`
+- Current version: `2.0.0`
 - Active branch for Stripe integration work: `dijis/stripe_updates`
 
 ## Repository Structure
@@ -25,7 +25,7 @@ npm run build    # Compile TypeScript → dist/ (runs tsc)
 npm run prepare  # Runs build automatically before publish
 ```
 
-No test framework is configured. No linter (ESLint/Prettier) is configured.
+**No test framework or linter configured.** VSCode is configured to use single quotes and format on save (see `.vscode/settings.json`).
 
 ## TypeScript Configuration
 
@@ -41,6 +41,9 @@ No test framework is configured. No linter (ESLint/Prettier) is configured.
 - Types with embedded ID: `Id` prefix — `IdUser`, `IdProperty`, `IdPropertyListing`
 - Enums: PascalCase with descriptive suffix — `PropertyTypeEnum`, `LeaseAgreementStatus`, `TransactionType`
 - Constants: camelCase arrays or PascalCase objects — `provinces`, `Amenities`, `creditScoreRanges`
+
+### Quote Style
+- Use **single quotes** for all string literals — `'PAYPAL'`, `'draft'`, `'user.ts'`
 
 ### Patterns
 - **Base entity**: `IEntity { id: string }` and `IDocument { id: string; createdAt: Timestamp; updatedAt: Timestamp }`

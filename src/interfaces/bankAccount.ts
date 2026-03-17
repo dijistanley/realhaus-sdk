@@ -1,5 +1,5 @@
-import { IEntity } from "./entity";
-import { AccountConnectionState, Vendors } from "../enums/bankAccount";
+import { IEntity } from './entity';
+import { AccountConnectionState, Vendors } from '../enums/bankAccount';
 
 export interface IPaypalContext {
   payer_id: string;
@@ -40,7 +40,7 @@ export interface IBankEftAccountInfo {
 
 export type IPreAuthDebitMandateAgreement = Omit<
   IBankEftAccountInfo,
-  "accountId"
+  'accountId'
 > & {
   email: string;
   agreementDate: number;

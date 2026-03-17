@@ -9,13 +9,13 @@ import {
   LeaseRequestDocStatus,
   AutoDebitSetupStatus,
   RentInsuranceStatus,
-} from "../enums/lease";
-import { IDescription } from "./description";
-import { IDocument, IEntity } from "./entity";
-import { IListing, IProperty } from "./property";
+} from '../enums/lease';
+import { IDescription } from './description';
+import { IDocument, IEntity } from './entity';
+import { IListing, IProperty } from './property';
 
-export type ILeaseListingInfo = Omit<IListing, "propertyId"> &
-  Omit<IProperty, "ownerId">;
+export type ILeaseListingInfo = Omit<IListing, 'propertyId'> &
+  Omit<IProperty, 'ownerId'>;
 
 export interface UtilityCoverage {
   utility: string;

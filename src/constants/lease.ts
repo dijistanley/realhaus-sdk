@@ -16,12 +16,12 @@ export const FeePaymentFrequencies = [
 ];
 
 export const ConditionComparer = {
-  "!=": (a: string, b: string) => a.toLowerCase() !== b.toLowerCase(),
-  "<=": (a: string, b: string) => a.toLowerCase() <= b.toLowerCase(),
-  ">=": (a: string, b: string) => a.toLowerCase() >= b.toLowerCase(),
-  "=": (a: string, b: string) => a.toLowerCase() === b.toLowerCase(),
-  ">": (a: string, b: string) => a.toLowerCase() > b.toLowerCase(),
-  "<": (a: string, b: string) => a.toLowerCase() < b.toLowerCase(),
+  '!=': (a: string, b: string) => a.toLowerCase() !== b.toLowerCase(),
+  '<=': (a: string, b: string) => a.toLowerCase() <= b.toLowerCase(),
+  '>=': (a: string, b: string) => a.toLowerCase() >= b.toLowerCase(),
+  '=': (a: string, b: string) => a.toLowerCase() === b.toLowerCase(),
+  '>': (a: string, b: string) => a.toLowerCase() > b.toLowerCase(),
+  '<': (a: string, b: string) => a.toLowerCase() < b.toLowerCase(),
 };
 
 export const LeaseStatuses = [
