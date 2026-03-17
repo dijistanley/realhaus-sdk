@@ -1,10 +1,14 @@
 export enum Vendors {
-  PAYPAL = 'PAYPAL',
-  PLAID = 'PLAID',
-  FLINKS = 'FLINKS',
+  PAYPAL = "PAYPAL",
+  STRIPE = "STRIPE",
 }
 
 export enum BankAccountPurpose {
-  PAYMENTS = 'PAYMENTS',
-  PAYOUTS = 'PAYOUTS',
+  PAYMENTS = "PAYMENTS",
+  PAYOUTS = "PAYOUTS",
+}
+
+export enum AccountConnectionState {
+  INCOMPLETE = "INCOMPLETE",
+  COMPLETE = "COMPLETE",
 }

@@ -3,9 +3,9 @@ import { IEntity } from './entity';
 
 export interface IRentApplicationForm {
   moveinDate: number;
-  hasPets: string;
-  hasVehicle: string;
-  smokes: string;
+  hasPets: boolean;
+  hasVehicle: boolean;
+  smokes: boolean;
 }
 export interface IRentApplication {
   tenantId: string;

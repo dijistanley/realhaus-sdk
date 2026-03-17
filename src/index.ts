@@ -31,6 +31,7 @@ export * from './interfaces/creditReport';
 export * from './interfaces/entity';
 export * from './interfaces/googlemaps';
 export * from './interfaces/identityVerification';
+export * from './interfaces/description';
 export * from './interfaces/lease';
 export * from './interfaces/leaseAgreement';
 export * from './interfaces/message';
