@@ -79,10 +79,13 @@ The SDK covers these core domains:
 ## Important Notes
 
 - **Canada-focused**: Province/region data covers Canadian provinces only (`constants/provinces.ts`)
-- **Stripe integration**: Active work on `dijis/stripe_updates` branch — `IAutoDebitSetup`, `IPreAuthDebitMandateAgreement`, `IConfirmAutoDebitAgreementRequest/Response`, and `IAccountConnectionStatusResponse` are part of Stripe PAD (Pre-Authorized Debit) and connected account support
+- **Stripe integration**: `IAutoDebitSetup` (on `ILeaseAgreement`) tracks PAD setup state with `AutoDebitSetupStatus` enum. `StripePADSetup` stores `mandateId`, `customerId`, `paymentMethodId`, `setupIntentId` — all must be string IDs (normalize expanded Stripe objects to `.id`)
 - **Bank vendors**: `Vendors` enum contains `PAYPAL` and `STRIPE` only — Flinks has been removed
-- **Account connection state**: `IAccountConnectionStatusResponse.state` uses the `AccountConnectionState` enum (`enums/bankAccount.ts`) — do not use raw string literals
+- **Account connection**: `IAccountConnectionStatusResponse` uses `AccountConnectionState` enum from `enums/bankAccount.ts`. `BankAccountPurpose` enum distinguishes `PAYMENTS` vs `PAYOUTS`. Always use enum values — never raw string literals
+- **User profile**: `IProfile.stripeCustomerId` links a user to their Stripe Customer (used for PAD setup)
+- **Stripe context**: `IStripeContext.connectedAccountId` stores the Stripe Connected Account ID on `IBankConnection`
 - **Tenant insurance**: `ILeasePolicy` includes `tenantInsuranceDoc?: IInsuranceDoc` (with `RentInsuranceStatus`) for tracking proof of insurance upload and review status
-- **`ITransactionLogMeta`** retains its `[x: string]: any` index signature intentionally to allow arbitrary vendor/integration metadata; do not remove it
+- **`ITransactionLogMeta`** retains its `[x: string]: any` index signature intentionally to allow arbitrary vendor/integration metadata; do not remove it. The `vendor` field `{ req: unknown; resp: unknown }` stores vendor request/response payloads
+- **Transaction status**: `TransactionStatus.PENDING_VENDOR` is used when a payment is awaiting vendor (Stripe) webhook confirmation
 - **Rent application boolean fields**: `IRentApplicationForm.hasPets`, `hasVehicle`, `smokes` are `boolean` — not strings
 - **Always run `npm run build`** after changes to confirm TypeScript compiles without errors before committing
