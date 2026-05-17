@@ -1,0 +1,19 @@
+flowchart LR
+  subgraph SDK["realhaus-sdk (this repo)"]
+    direction TB
+    Src[src/<br/>interfaces · enums · constants]
+    Dist[dist/<br/>.js + .d.ts + source maps]
+    Src -->|tsc| Dist
+  end
+
+  subgraph Consumers
+    Backend[realhaus-firebase<br/>functions]
+    Main[realhaus/apps/main]
+    Admin[realhaus/apps/admin]
+    Mobile[realhaus/apps/mobile]
+  end
+
+  Backend -.git URL#dijis/stripe_updates.-> SDK
+  Main -.git URL main.-> SDK
+  Admin -.git URL main.-> SDK
+  Mobile -.git URL main.-> SDK
