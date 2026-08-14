@@ -84,6 +84,7 @@ export interface ILeaseAgreement {
   autoDebitSetup?: IAutoDebitSetup;
   initialLeaseAgreementId?: string;
   isExpired?: boolean;
+  leaseTemplateVersion?: string;
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
