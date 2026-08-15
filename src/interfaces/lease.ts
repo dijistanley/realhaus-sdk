@@ -143,7 +143,7 @@ export interface IRequestDocumentType {
   status: LeaseRequestDocStatus;
 }
 
-type StripePADSetup = {
+export type StripePADSetup = {
   mandateId: string;
   customerId: string;
   paymentMethodId: string;

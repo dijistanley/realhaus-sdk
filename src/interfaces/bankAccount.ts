@@ -1,5 +1,6 @@
 import { IEntity } from './entity';
 import { AccountConnectionState, Vendors } from '../enums/bankAccount';
+import { StripePADSetup } from './lease';
 
 export interface IPaypalContext {
   payer_id: string;
@@ -19,11 +20,19 @@ export interface IStripeContext {
   connectedAccountId?: string;
 }
 
-export interface IBankConnection {
+export interface IPaypalBankConnection {
   timestamp: number;
-  vendor: Vendors;
-  context: IPaypalContext | IStripeContext;
+  vendor: Vendors.PAYPAL;
+  context: IPaypalContext;
 }
+
+export interface IStripeBankConnection {
+  timestamp: number;
+  vendor: Vendors.STRIPE;
+  context: IStripeContext;
+}
+
+export type IBankConnection = IPaypalBankConnection | IStripeBankConnection;
 
 export interface IBankAccount {
   connection: IBankConnection;
@@ -55,7 +64,7 @@ export interface IConfirmAutoDebitAgreementRequest {
 }
 
 export interface IConfirmAutoDebitAgreementResponse {
-  stripePaymentId: string;
+  stripe: StripePADSetup;
   timestamp: number;
 }
 
