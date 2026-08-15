@@ -1,5 +1,5 @@
-import { ConditionOPS } from "../enums/lease";
-import { PropertyTypeEnum } from "./property";
+import { ConditionOPS } from '../enums/lease';
+import { PropertyTypeEnum } from './property';
 
 export interface ILeaseAgreementTemplate {
   sections: ILeaseAgreementTemplateSection[];

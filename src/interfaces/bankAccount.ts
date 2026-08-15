@@ -1,5 +1,6 @@
 import { IEntity } from './entity';
-import { BankAccountPurpose, Vendors } from '../enums/bankAccount';
+import { AccountConnectionState, Vendors } from '../enums/bankAccount';
+import { StripePADSetup } from './lease';
 
 export interface IPaypalContext {
   payer_id: string;
@@ -15,36 +16,26 @@ export interface IPaypalToken {
   nonce: string;
 }
 
-export interface IPlaidContext {
-  accessToken: string;
-  requestId: string;
-  itemId: string;
-  institution: string;
-  institutionId: string;
+export interface IStripeContext {
+  connectedAccountId?: string;
 }
 
-export interface IFlinksContext {
-  loginId: string;
-  institution: string;
-  accountId: string;
-}
-
-export interface IBankConnection {
+export interface IPaypalBankConnection {
   timestamp: number;
-  vendor: Vendors;
-  context: IPlaidContext | IFlinksContext | IPaypalContext;
+  vendor: Vendors.PAYPAL;
+  context: IPaypalContext;
 }
+
+export interface IStripeBankConnection {
+  timestamp: number;
+  vendor: Vendors.STRIPE;
+  context: IStripeContext;
+}
+
+export type IBankConnection = IPaypalBankConnection | IStripeBankConnection;
 
 export interface IBankAccount {
-  payments: IBankConnection[];
-  payouts: IBankConnection[];
-}
-
-export interface IExchangePlaidLinkTokenRequest {
-  publicToken: string;
-  institution: string;
-  institutionId: string;
-  bankAccountPurpose: BankAccountPurpose;
+  connection: IBankConnection;
 }
 
 export type IdBankAccount = IEntity & IBankAccount;
@@ -56,11 +47,14 @@ export interface IBankEftAccountInfo {
   branch: string;
 }
 
-export type IPreAuthDebitMandateAgreement = Omit<IBankEftAccountInfo, 'accountId'> & {
+export type IPreAuthDebitMandateAgreement = Omit<
+  IBankEftAccountInfo,
+  'accountId'
+> & {
   email: string;
   agreementDate: number;
   accountHolder: string;
-}
+};
 
 export interface IConfirmAutoDebitAgreementRequest {
   leaseId: string;
@@ -70,6 +64,13 @@ export interface IConfirmAutoDebitAgreementRequest {
 }
 
 export interface IConfirmAutoDebitAgreementResponse {
-  stripePaymentId: string;
+  stripe: StripePADSetup;
   timestamp: number;
+}
+
+export interface IAccountConnectionStatusResponse {
+  state: AccountConnectionState;
+  details_submitted: boolean;
+  charges_enabled: boolean;
+  payouts_enabled: boolean;
 }

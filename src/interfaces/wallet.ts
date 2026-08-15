@@ -6,7 +6,7 @@ export interface IWallet {
   owner: string;
   lastTransactionId?: string;
   withdrawInfo?: {
-    lastProcessedTranasctionId: string;
+    lastProcessedTransactionId: string;
     timestamp: number;
   };
 }
@@ -34,7 +34,7 @@ export interface ITransactionLogMeta {
   leaseId?: string;
   billId?: string;
   interac?: { url?: string; securityQuestion: string; securityAnswer: string };
-  vendor?: { req: any; resp: any };
+  vendor?: { req: unknown; resp: unknown };
 }
 
 export interface ITransactionLog {

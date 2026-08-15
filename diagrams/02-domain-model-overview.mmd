@@ -1,0 +1,41 @@
+classDiagram
+  class IEntity { +id: string }
+  class IProfile { +stripeCustomerId? : string }
+  class IProperty { +ownerId: string }
+  class IListing { +propertyId: string }
+  class ILeaseAgreement { +ownerId, tenantIds[]<br/>autoDebitSetup: IAutoDebitSetup }
+  class IBill { +leaseId, type: BillType<br/>status: BillStatus, trxLogRef? }
+  class IRentApplication { +listingId, applicantId, status }
+  class ITransactionLog { +senderId, receiverId<br/>status: TransactionStatus<br/>meta: ITransactionLogMeta }
+  class IWallet { +userId, balance }
+  class ITransaction { +walletId, amount, type }
+  class IBankAccount { +uid, purpose: BankAccountPurpose }
+  class IBankConnection { +vendor: Vendors<br/>stripeContext?: IStripeContext }
+  class ICreditReport { +ownerId, summary, publicRecords[] }
+  class IIDVerification { +uid, vendor, status }
+  class IConversation { +participants[] }
+  class IMessage { +conversationId, senderId }
+  class IRating { +leaseId, ratedById, ratedUserId }
+
+  IEntity <|.. IProfile
+  IEntity <|.. IProperty
+  IEntity <|.. IListing
+  IEntity <|.. ILeaseAgreement
+  IEntity <|.. IBill
+  IEntity <|.. IRentApplication
+  IEntity <|.. ITransactionLog
+
+  IProfile "1" --o "*" IProperty : owns
+  IProperty "1" --o "*" IListing : has
+  IListing "1" --o "*" IRentApplication : receives
+  ILeaseAgreement "1" --o "*" IBill : generates
+  IBill --> ITransactionLog : trxLogRef
+  IProfile "1" --> "1" IWallet : holds
+  IWallet "1" --o "*" ITransaction : ledger
+  IProfile "1" --o "*" IBankAccount : connects
+  IBankAccount "1" --> "1" IBankConnection : via
+  IProfile "1" --o "*" ICreditReport : has
+  IProfile "1" --o "*" IIDVerification : has
+  IProfile "1" --o "*" IConversation : participates
+  IConversation "1" --o "*" IMessage : contains
+  ILeaseAgreement "1" --o "*" IRating : produces
