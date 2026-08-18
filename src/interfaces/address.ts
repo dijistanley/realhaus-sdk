@@ -10,6 +10,6 @@ export interface IAddress {
   province: string;
   postalCode: string;
   country: string;
-  neighborhood: string;
-  geoloc: LatLngLiteral & GeohashLiteral;
+  neighborhood?: string;
+  geoloc?: LatLngLiteral & GeohashLiteral;
 }
