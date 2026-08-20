@@ -85,6 +85,8 @@ export interface ILeaseAgreement {
   initialLeaseAgreementId?: string;
   isExpired?: boolean;
   leaseTemplateVersion?: string;
+  terminatedOn?: number;
+  cancelledOn?: number;
 }
 export type IdLeaseAgreement = IEntity & ILeaseAgreement;
 
