@@ -60,7 +60,7 @@ export interface ILeaseSignature {
 export interface ILeaseAgreement {
   tenantIds: string[];
   ownerId: string;
-  rentApplicationId: string;
+  rentApplicationId?: string;
   listingId: string;
   listingInfo: ILeaseListingInfo;
   moveinDate: number;
