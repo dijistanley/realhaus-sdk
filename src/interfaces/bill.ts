@@ -1,4 +1,5 @@
 import { IEntity } from './entity';
+import { IServiceFeeCalculation } from './wallet';
 
 export enum BillType {
   RENT = 'RENT',
@@ -49,4 +50,20 @@ export interface IBillRequest {
   senderId: string;
   amount: number;
   note: string;
+}
+
+export enum BillServiceFeeExemption {
+  NOT_RENT = 'NOT_RENT',
+  NOT_OWED_TO_OWNER = 'NOT_OWED_TO_OWNER',
+  LEASE_NOT_ON_REALHAUS = 'LEASE_NOT_ON_REALHAUS',
+}
+
+/**
+ * The service fee the landlord is charged when a bill is marked paid outside Realhaus.
+ */
+export interface IBillServiceFee {
+  applies: boolean;
+  amount: number; // 0 when no fee applies
+  reason?: BillServiceFeeExemption; // why no fee applies
+  calculation?: IServiceFeeCalculation; // set when a fee applies
 }
