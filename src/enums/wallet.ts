@@ -19,3 +19,8 @@ export enum TransactionStatus {
   PENDING_REALHAUS = 'PENDING_REALHAUS',
   PENDING_VENDOR = 'PENDING_VENDOR',
 }
+
+export enum ServiceFeeRule {
+  FLAT = 'FLAT', // a flat fee, for rent up to the flat fee limit
+  PERCENT = 'PERCENT', // a percentage of the whole rent, above the flat fee limit
+}
